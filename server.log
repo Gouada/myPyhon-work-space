@@ -1,0 +1,15 @@
+2020.07.11 14:21:16 - GuineenewsStartPageTest INFO driver was successfuly created
+2020.07.11 14:21:16 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.11 14:21:18 - GuineenewsStartPageTest INFO Guineenews started successfully
+2020.07.11 14:21:29 - GuineenewsStartPage INFO xpath
+2020.07.11 14:21:29 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[7]/a
+2020.07.11 14:21:33 - GuineenewsMenu INFO xpath
+2020.07.11 14:21:33 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.11 14:21:35 - GuineenewsMenu INFO xpath
+2020.07.11 14:21:35 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]
+2020.07.11 14:21:37 - GuineenewsMenu INFO xpath
+2020.07.11 14:21:37 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]
+2020.07.11 14:21:40 - GuineenewsMenu INFO xpath
+2020.07.11 14:21:40 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]
+2020.07.11 14:21:42 - GuineenewsMenu INFO xpath
+2020.07.11 14:21:42 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
