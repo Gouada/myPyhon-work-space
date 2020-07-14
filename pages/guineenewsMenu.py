@@ -39,7 +39,7 @@ class GuineenewsMenu(BasePage):
     def go_to_rubrique(self, rubrique, locatorType="xpath"):
         if rubrique == "Acceuil":
             self.clickElement ( self.menu_acceuil, "xpath" )
-            # self.waitForElementToBeClickable(self.menu, "id")
+            # self.waitForElementToBe(self.menu, "id")
 
         if rubrique == "News":
             self.clickElement ( self.menu_news, "xpath" )
@@ -81,7 +81,7 @@ class GuineenewsMenu(BasePage):
         if sub_rubrique == "Tous":
             self.move_mouse_on_main_menu_element(self.menu_news)
             self.clickElement ( self.sub_menu_tous, "xpath" )
-            # self.waitForElementToBeClickable(self.menu, "id")
+            # self.waitForElementToBe(self.menu, "id")
 
         if sub_rubrique == "art_et_culture":
             self.move_mouse_on_main_menu_element(self.menu_news)

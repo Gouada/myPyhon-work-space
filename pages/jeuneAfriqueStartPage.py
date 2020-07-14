@@ -32,7 +32,7 @@ class JeuneAfriqueStartPage(BasePage):
             #iframe = self.getElement(self.iframe, "xpath")
             #self.driver.switch_to.frame(self.iframe)
             #self.driver.switch_to.active_element ()
-            #self.waitForElementToBeClickable(self.btn_accepter_cookies,"id", 10, 1)
+            #self.waitForElementToBe(self.btn_accepter_cookies,"id", 10, 1)
             #if self.isClickable(self.btn_accepter_cookies,"xpath"):
             self.clickElement(self.btn_accepter_cookies,"xpath")
             #self.clickElement(self.btn_voir_tous_les_articles,"xpath")
@@ -43,7 +43,7 @@ class JeuneAfriqueStartPage(BasePage):
     def go_to_rubrique(self, rubrique, locatorType="xpath"):
         if rubrique == "Politique":
             self.clickElement(self.btn_politique, "xpath")
-            #self.waitForElementToBeClickable(self.menu, "id")
+            #self.waitForElementToBe(self.menu, "id")
 
         if rubrique == "Economie":
             self.clickElement(self.btn_economie, "xpath")

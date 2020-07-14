@@ -23,6 +23,10 @@ class GuineenewsStartPage(BasePage):
     sub_menu_revue_de_presse = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"
     sub_menu_societe = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"
 
+    search_icon = 'td-header-search-button' #"//a[@id='td-header-search-button']"
+    search_field = 'td-header-search' #"//input[@id='td-header-search']"
+    search_btn = 'td-header-search-top' #"//input[@id='td-header-search-top']"
+
     def __init__(self, driver):
         try:
             super().__init__(driver)
@@ -34,7 +38,7 @@ class GuineenewsStartPage(BasePage):
     def go_to_rubrique(self, rubrique, locatorType="xpath"):
         if rubrique == "Acceuil":
             self.clickElement ( self.menu_acceuil, "xpath" )
-            # self.waitForElementToBeClickable(self.menu, "id")
+            # self.waitForElementToBe(self.menu, "id")
 
         if rubrique == "News":
             self.clickElement ( self.menu_news, "xpath" )
@@ -61,7 +65,7 @@ class GuineenewsStartPage(BasePage):
 
         if sub_rubrique == "Tous":
             self.clickElement ( self.sub_menu_tous, "xpath" )
-            # self.waitForElementToBeClickable(self.menu, "id")
+            # self.waitForElementToBe(self.menu, "id")
 
         if sub_rubrique == "art_et_culture":
             self.clickElement ( self.sub_menu_art_et_culture, "xpath" )
@@ -93,3 +97,10 @@ class GuineenewsStartPage(BasePage):
 
         if menu_locator == "Revue":
             self.moveMouseOnElement(self.sub_menu_revue_de_presse,locatorType)
+
+    def search(self, txt):
+        self.clickElement(self.search_icon)
+        searchField_input = self.waitForElementToBe( self.search_field, "id", event="visible" )
+        self.clearField(element=searchField_input)
+        self.typeTextInField(text=txt, element=searchField_input)
+        self.clickElement(self.search_btn, "id")

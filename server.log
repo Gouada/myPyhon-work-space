@@ -1,15 +1,30 @@
-2020.07.11 14:21:16 - GuineenewsStartPageTest INFO driver was successfuly created
-2020.07.11 14:21:16 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.11 14:21:18 - GuineenewsStartPageTest INFO Guineenews started successfully
-2020.07.11 14:21:29 - GuineenewsStartPage INFO xpath
-2020.07.11 14:21:29 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[7]/a
-2020.07.11 14:21:33 - GuineenewsMenu INFO xpath
-2020.07.11 14:21:33 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.11 14:21:35 - GuineenewsMenu INFO xpath
-2020.07.11 14:21:35 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]
-2020.07.11 14:21:37 - GuineenewsMenu INFO xpath
-2020.07.11 14:21:37 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]
-2020.07.11 14:21:40 - GuineenewsMenu INFO xpath
-2020.07.11 14:21:40 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]
-2020.07.11 14:21:42 - GuineenewsMenu INFO xpath
-2020.07.11 14:21:42 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.14 21:22:42 - GuineenewsStartPageTest INFO driver was successfuly created
+2020.07.14 21:22:42 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.14 21:22:44 - GuineenewsStartPageTest INFO Guineenews started successfully
+2020.07.14 21:22:56 - GuineenewsStartPage INFO xpath
+2020.07.14 21:22:56 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[7]/a
+2020.07.14 21:22:59 - GuineenewsMenu INFO xpath
+2020.07.14 21:22:59 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.14 21:23:01 - GuineenewsMenu INFO xpath
+2020.07.14 21:23:01 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]
+2020.07.14 21:23:04 - GuineenewsMenu INFO xpath
+2020.07.14 21:23:04 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]
+2020.07.14 21:23:06 - GuineenewsMenu INFO xpath
+2020.07.14 21:23:06 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]
+2020.07.14 21:23:08 - GuineenewsMenu INFO xpath
+2020.07.14 21:23:08 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.14 21:23:17 - GuineenewsStartPage INFO id
+2020.07.14 21:23:17 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-button
+2020.07.14 21:23:18 - GuineenewsStartPage INFO id
+2020.07.14 21:23:18 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-top
+2020.07.14 21:23:24 - GuineenewsStartPage INFO id
+2020.07.14 21:23:24 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-button
+2020.07.14 21:23:25 - GuineenewsStartPage INFO id
+2020.07.14 21:23:25 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-top
+2020.07.14 21:23:29 - GuineenewsStartPage INFO id
+2020.07.14 21:23:29 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-button
+2020.07.14 21:23:30 - GuineenewsStartPage INFO id
+2020.07.14 21:23:30 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-top
+2020.07.14 21:23:36 - GuineenewsStartPage INFO id
+2020.07.14 21:23:36 - GuineenewsStartPage INFO .....myLocator..................................................td-header-search-button
+2020.07.14 21:23:37 - GuineenewsStartPageTest ERROR sequence item 0: expected str instance, list found

@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
-from selenium.webdriver.support import expected_conditions as e_c
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 #from selenium.webdriver.common.actions import *
@@ -77,15 +77,20 @@ class SeleniumDriverWrapper:
         except ElementNotVisibleException as error:
             self.logger(error)
 
-    def typeTextInField(self, myLocator, locatorType,text):
+    def typeTextInField(self, myLocator='', locatorType="id",text='', element=None):
         try:
-            self.getElement(myLocator, locatorType).send_keys(text)
+            if element is None:
+                self.logger.warning("Elment is None ........................**********")
+                element = self.getElement(myLocator, locatorType)
+            element.send_keys(text)
         except ElementNotVisibleException as error:
             self.logger(error)
 
-    def clearField(self, myLocator, locatorType,text):
+    def clearField(self, myLocator='', locatorType='id',element=None):
         try:
-            self.getElement(myLocator, locatorType).clear()
+            if element is None:
+                element = self.getElement(myLocator, locatorType)
+            element.clear()
         except ElementNotVisibleException as error:
             self.logger(error)
 
@@ -166,21 +171,28 @@ class SeleniumDriverWrapper:
 
             if element is None:
                 element = self.getElements(myLocator,locatorType).__getitem__(elementPosition)
-                #element = self.waitForElementToBeClickable(myLocator, locatorType)
+                #element = self.waitForElementToBe(myLocator, locatorType)
             element.click()
                 #self.getElements(myLocator, locatorType).__getitem__(elementPosition).click()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.takescreenShotOnError()
             self.logger(error)
 
-    def waitForElementToBeClickable(self, myLocator, locatorType, timeout=35, poll_frequency=.5, elt=None):
+    def waitForElementToBe(self, myLocator, locatorType, timeout=15, poll_frequency=.5, element=None,event="clickable"):
         try:
-            wt = WebDriverWait(self.driver,timeout,poll_frequency,
+            #wt = WebDriverWait(self.driver,10)
+            wt = WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll_frequency,
                                     ignored_exceptions=[NoSuchElementException,ElementNotVisibleException,
-                                                        ElementNotSelectableException])
+                                                        ElementNotSelectableException, ElementNotInteractableException])
             byType = self.getByType ( locatorType)
-            element = wt.until(e_c.element_to_be_clickable(byType, myLocator))
-            self.logger.info(f"waiting for {element} to be clickable")
+
+            if event == 'visible':
+                element = wt.until(EC.presence_of_element_located((byType, myLocator)))
+            if event == "clickable":
+                element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
+            else:
+                element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
+
             return element
         except Exception as error:
             self.logger.error(error)
