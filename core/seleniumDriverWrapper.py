@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-#from selenium.webdriver.common.actions import *
+#from selenium.webdriver.common.actions import *obj9ob9
 from selenium.common.exceptions import *
 from utils.logger import MyLogger
 import logging
@@ -75,7 +75,7 @@ class SeleniumDriverWrapper:
         try:
             self.getElement(myLocator, locatorType).click()
         except ElementNotVisibleException as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def typeTextInField(self, myLocator='', locatorType="id",text='', element=None):
         try:
@@ -84,7 +84,7 @@ class SeleniumDriverWrapper:
                 element = self.getElement(myLocator, locatorType)
             element.send_keys(text)
         except ElementNotVisibleException as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def clearField(self, myLocator='', locatorType='id',element=None):
         try:
@@ -92,7 +92,7 @@ class SeleniumDriverWrapper:
                 element = self.getElement(myLocator, locatorType)
             element.clear()
         except ElementNotVisibleException as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def getElementText(self, myLocator, locatorType):
         self.getElement(myLocator, locatorType).text
@@ -105,19 +105,19 @@ class SeleniumDriverWrapper:
         try:
             self.getElement(myLocator, locatorType).is_enabled()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def isVisible(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).is_displayed()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def isSelected(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).is_selected()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     #def isEmpty(self, myLocator, locatorType):
      #   self.getElement(myLocator, locatorType).
@@ -126,45 +126,45 @@ class SeleniumDriverWrapper:
         try:
             self.getElement(myLocator, locatorType).get_attribute("checked")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def isFocused(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).get_attribute("focused")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def isClickable(self, myLocator, locatorType):
         try:
             byType = self.getByType(locatorType)
             self.getElement(myLocator, byType).get_attribute("clickable")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def getClassName(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).get_attribute("classname")
             #webdriver.Chrome.find_elements(By.id, myLocator).__getitem__().__len__()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def getContentDescription(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).get_attribute("content-Desc")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def getName(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).get_attribute("name")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def getLocation(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).location
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def clickListElement(self, myLocator, locatorType, elementPosition, element=None):
         try:
@@ -176,7 +176,7 @@ class SeleniumDriverWrapper:
                 #self.getElements(myLocator, locatorType).__getitem__(elementPosition).click()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.takescreenShotOnError()
-            self.logger(error)
+            self.logger.error(error)
 
     def waitForElementToBe(self, myLocator, locatorType, timeout=15, poll_frequency=.5, element=None,event="clickable"):
         try:
@@ -199,55 +199,55 @@ class SeleniumDriverWrapper:
 
     def scrollDownToBottom(self):
         try:
-            windowHeight = self.driver.execute_script("retrun document.body.scrollHeight);")
+            windowHeight = self.driver.execute_script("return document.body.scrollHeight;")
             while True:
                 self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-                newWidowHeight = self.driver.execute_script("retrun document.body.scrollHeight);")
+                newWidowHeight = self.driver.execute_script("return document.body.scrollHeight;")
                 if windowHeight == newWidowHeight:
                     break
                 windowHeight=newWidowHeight
         except Exception as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def scrollUpToTop(self):
         try:
-            windowHeight = self.driver.execute_script("retrun document.body.scrollHeight);")
+            windowHeight = self.driver.execute_script("return document.body.scrollHeight;")
             while True:
                 self.driver.execute_script("window.scrollTo(0, -document.body.scrollHeight);")
 
-                newWidowHeight = self.driver.execute_script("retrun document.body.scrollHeight);")
+                newWidowHeight = self.driver.execute_script("return document.body.scrollHeight;")
                 if windowHeight == newWidowHeight:
                     break
                 windowHeight = newWidowHeight
         except Exception as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def scrollElementIntoView(self, element):
         try:
             self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
         except Exception as error:
-            self.logger(error)
+            self.logger.error(error)
 
 
     def scrollDownToElement(self, element):
         try:
             element.send_keys(Keys.PAGE_DOWN)
         except Exception as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def scrollUpToElement(self, element):
         try:
             element.send_keys(Keys.PAGE_UP)
         except Exception as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def goBack(self):
         try:
             actions = ActionChains(self.driver)
             actions.send_keys(Keys.ALT, Keys.LEFT).perform()
         except Exception as error:
-            self.logger(error)
+            self.logger.error(error)
 
     def moveMouseOnElement(self, mylocator, locatorType):
         try:

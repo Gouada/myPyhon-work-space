@@ -11,6 +11,6 @@ class MyFirefoxDriverManager(MyWebDriverManager):
     def createWebDriver(self):
         profile = webdriver.FirefoxProfile ()
         profile.accept_untrusted_certs = True
-        driver = webdriver.Chrome(executable_path="C:\\MyWorkspace\\SeleniumFirefoxDriver\\2.6\\geckodriver.exe", firefox_profile=profile)
+        driver = webdriver.Firefox(executable_path="C:\\MyWorkspace\\SeleniumFirefoxDriver\\2.6\\geckodriver.exe", firefox_profile=profile)
         driver.maximize_window()
         return driver

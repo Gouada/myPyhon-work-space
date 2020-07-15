@@ -21,7 +21,7 @@ class GuineenewsStartPageTest ( unittest.TestCase ):
     @classmethod
     def setUpClass(cls) -> None:
         try:
-            cls.driver = MyDriverFactory.getDriverManager ( "CHROME" ).getDriver ()
+            cls.driver = MyDriverFactory.getDriverManager ( "FIREFOX" ).getDriver ()
             cls.logger.info ( "driver was successfuly created" )
             cls.startPage = GuineenewsStartPage ( cls.driver )
             cls.menuPage = GuineenewsMenu ( cls.driver )

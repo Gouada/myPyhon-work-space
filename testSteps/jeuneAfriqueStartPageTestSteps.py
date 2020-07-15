@@ -20,8 +20,8 @@ class JeuneAfriqueStartPageTestSteps(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         #cls.logger = cls.
-        if driverFactory.MyDriverFactory.getDriverManager("CHROME") is not None:
-            cls.driver = driverFactory.MyDriverFactory.getDriverManager("CHROME").getDriver()
+        if driverFactory.MyDriverFactory.getDriverManager("FIREFOX") is not None:
+            cls.driver = driverFactory.MyDriverFactory.getDriverManager("FIREFOX").getDriver()
             cls.startPage = JeuneAfriqueStartPage(cls.driver)
         else:
             cls.logger.error("drivermanager is null")
@@ -55,29 +55,36 @@ class JeuneAfriqueStartPageTestSteps(unittest.TestCase):
         try:
             self.startPage.go_to_rubrique("Culture")
             self.logger.info("... going to culture page ...")
-            #sleep ( 3 )
+            sleep ( 3 )
         except Exception as error:
             self.logger.error(error)
 
     @pytest.mark.run ( order=4 )
-    def test_go_to_lifestyle_page(self):
+    def test_scrolltoBottom(self):
         try:
-            self.startPage.go_to_rubrique ( "Lifestyle" )
-            self.logger.info ( "... going to lifestyle page ..." )
-            #sleep ( 3 )
+            self.startPage.scrollDownToBottom ()
+            sleep ( 3 )
         except Exception as error:
             self.logger.error ( error )
 
-    @pytest.mark.run(order=5)
+    @pytest.mark.run ( order=5 )
+    def test_scrolltoTop(self):
+        try:
+            self.startPage.scrollUpToTop ()
+            sleep ( 3 )
+        except Exception as error:
+            self.logger.error ( error )
+
+    @pytest.mark.run(order=6)
     def test_go_to_societe_page(self):
         try:
             self.startPage.go_to_rubrique("Societe")
             self.logger.info("... going to societe page ...")
-            #sleep ( 3 )
+            sleep ( 3 )
         except Exception as error:
             self.logger.error(error)
 
-    @pytest.mark.run ( order=6 )
+    @pytest.mark.run ( order=7 )
     def test_go_to_sport_page(self):
         try:
             self.startPage.go_to_rubrique ( "Sport" )
@@ -86,14 +93,23 @@ class JeuneAfriqueStartPageTestSteps(unittest.TestCase):
         except Exception as error:
             self.logger.error ( error )
 
-    # @pytest.mark.run (order=10)
-    # def test_go_to_economie_page(self):
-    #     try:
-    #         self.startPage.go_to_rubrique("Economie")
-    #         self.logger.info ( "... going to economie page ..." )
-    #         sleep ( 3 )
-    #     except Exception as error:
-    #         self.logger.error ( error )
+    @pytest.mark.run ( order=8 )
+    def test_go_to_lifestyle_page(self):
+        try:
+            self.startPage.go_to_rubrique ( "Lifestyle" )
+            self.logger.info ( "... going to lifestyle page ..." )
+            sleep ( 3 )
+        except Exception as error:
+            self.logger.error ( error )
+
+    @pytest.mark.run (order=9)
+    def test_go_to_economie_page(self):
+        try:
+            self.startPage.go_to_rubrique("Economie")
+            self.logger.info ( "... going to economie page ..." )
+            sleep ( 3 )
+        except Exception as error:
+            self.logger.error ( error )
 
     # @pytest.mark.run(order=7)
     # def test_go_back(self):
@@ -104,20 +120,11 @@ class JeuneAfriqueStartPageTestSteps(unittest.TestCase):
     #     except Exception as error:
     #         self.logger.error(error)
 
-    @pytest.mark.run ( order=7 )
-    def test_scrolltoBottom(self):
-        try:
-            self.startPage.scrollDownToBottom()
-            self.logger.info ( "... scrolling to bottom ..." )
-            self.driver.implicitly_wait(5)
-            sleep(5)
-        except Exception as error:
-            self.logger.error ( error )
 
-    # def tearDown(self) -> None:
-    #     pass
+    def tearDown(self) -> None:
+        pass
 
-    # @classmethod
-    # def tearDownClass(cls) -> None:
-    #     if cls.driver is not None:
-    #         cls.driver.quit()
+    @classmethod
+    def tearDownClass(cls) -> None:
+        if cls.driver is not None:
+            cls.driver.quit()
