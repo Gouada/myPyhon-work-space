@@ -1,20 +1,6 @@
-2020.07.15 14:37:05 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:05 - JeuneAfriqueStartPage INFO .....myLocator..................................................//button[@id='scmp-btn-allow']
-2020.07.15 14:37:06 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:06 - JeuneAfriqueStartPage INFO .....myLocator..................................................//nav['main-navigation']//a[contains(@data-label, 'Politique')]
-2020.07.15 14:37:11 - JeuneAfriqueStartPageTestSteps INFO ... going to politique page ...
-2020.07.15 14:37:11 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:11 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Culture')]
-2020.07.15 14:37:13 - JeuneAfriqueStartPageTestSteps INFO ... going to culture page ...
-2020.07.15 14:37:22 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:22 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Société')]
-2020.07.15 14:37:24 - JeuneAfriqueStartPageTestSteps INFO ... going to societe page ...
-2020.07.15 14:37:27 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:27 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Sport')]
-2020.07.15 14:37:29 - JeuneAfriqueStartPageTestSteps INFO ... going to sport page ...
-2020.07.15 14:37:32 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:32 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Lifestyle')]
-2020.07.15 14:37:33 - JeuneAfriqueStartPageTestSteps INFO ... going to lifestyle page ...
-2020.07.15 14:37:36 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:36 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Économie')]
-2020.07.15 14:37:38 - JeuneAfriqueStartPageTestSteps INFO ... going to economie page ...
+2020.07.17 18:34:45 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.17 18:34:45 - GuineenewsStartPage INFO xpath
+2020.07.17 18:34:45 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[7]/a
+2020.07.17 18:34:45 - setUpClass INFO whatsapp
+2020.07.17 18:34:48 - GuineenewsStartPage INFO xpath
+2020.07.17 18:34:48 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[8]/a
