@@ -1,20 +1,33 @@
-2020.07.15 14:37:05 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:05 - JeuneAfriqueStartPage INFO .....myLocator..................................................//button[@id='scmp-btn-allow']
-2020.07.15 14:37:06 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:06 - JeuneAfriqueStartPage INFO .....myLocator..................................................//nav['main-navigation']//a[contains(@data-label, 'Politique')]
-2020.07.15 14:37:11 - JeuneAfriqueStartPageTestSteps INFO ... going to politique page ...
-2020.07.15 14:37:11 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:11 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Culture')]
-2020.07.15 14:37:13 - JeuneAfriqueStartPageTestSteps INFO ... going to culture page ...
-2020.07.15 14:37:22 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:22 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Société')]
-2020.07.15 14:37:24 - JeuneAfriqueStartPageTestSteps INFO ... going to societe page ...
-2020.07.15 14:37:27 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:27 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Sport')]
-2020.07.15 14:37:29 - JeuneAfriqueStartPageTestSteps INFO ... going to sport page ...
-2020.07.15 14:37:32 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:32 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Lifestyle')]
-2020.07.15 14:37:33 - JeuneAfriqueStartPageTestSteps INFO ... going to lifestyle page ...
-2020.07.15 14:37:36 - JeuneAfriqueStartPage INFO xpath
-2020.07.15 14:37:36 - JeuneAfriqueStartPage INFO .....myLocator..................................................//a[contains(@data-label, 'Économie')]
-2020.07.15 14:37:38 - JeuneAfriqueStartPageTestSteps INFO ... going to economie page ...
+2020.07.17 13:02:43 - GuineenewsStartPageTest INFO driver was successfuly created
+2020.07.17 13:02:43 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.17 13:02:43 - GuineenewsMenu INFO xpath
+2020.07.17 13:02:43 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.17 13:02:43 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/a"}
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.17 13:02:44 - GuineenewsMenu INFO taking screenshot ... click1594983763.8809352.png
+2020.07.17 13:02:44 - GuineenewsMenu ERROR move_to requires a WebElement
+2020.07.17 13:02:46 - GuineenewsMenu INFO xpath
+2020.07.17 13:02:46 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]
+2020.07.17 13:02:46 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]"}
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.17 13:02:46 - GuineenewsMenu INFO taking screenshot ... click1594983766.2162163.png
+2020.07.17 13:02:46 - GuineenewsMenu ERROR move_to requires a WebElement
+2020.07.17 13:02:48 - GuineenewsMenu INFO xpath
+2020.07.17 13:02:48 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]
+2020.07.17 13:02:48 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"}
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.17 13:02:48 - GuineenewsMenu INFO taking screenshot ... click1594983768.5323544.png
+2020.07.17 13:02:48 - GuineenewsMenu ERROR move_to requires a WebElement
+2020.07.17 13:02:50 - GuineenewsMenu INFO xpath
+2020.07.17 13:02:50 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]
+2020.07.17 13:02:50 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"}
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.17 13:02:51 - GuineenewsMenu INFO taking screenshot ... click1594983770.86392.png
+2020.07.17 13:02:51 - GuineenewsMenu ERROR move_to requires a WebElement
+2020.07.17 13:02:53 - GuineenewsMenu INFO xpath
+2020.07.17 13:02:53 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.17 13:02:54 - GuineenewsMenu ERROR move_to requires a WebElement

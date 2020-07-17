@@ -20,8 +20,8 @@ class JeuneAfriqueStartPageTestSteps(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         #cls.logger = cls.
-        if driverFactory.MyDriverFactory.getDriverManager("FIREFOX") is not None:
-            cls.driver = driverFactory.MyDriverFactory.getDriverManager("FIREFOX").getDriver()
+        if driverFactory.MyDriverFactory.getDriverManager("CHROME") is not None:
+            cls.driver = driverFactory.MyDriverFactory.getDriverManager("CHROME").getDriver()
             cls.startPage = JeuneAfriqueStartPage(cls.driver)
         else:
             cls.logger.error("drivermanager is null")

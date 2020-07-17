@@ -21,7 +21,7 @@ class GuineenewsStartPageTest ( unittest.TestCase ):
     @classmethod
     def setUpClass(cls) -> None:
         try:
-            cls.driver = MyDriverFactory.getDriverManager ( "FIREFOX" ).getDriver ()
+            cls.driver = MyDriverFactory.getDriverManager ( "CHROME" ).getDriver ()
             cls.logger.info ( "driver was successfuly created" )
             cls.startPage = GuineenewsStartPage ( cls.driver )
             cls.menuPage = GuineenewsMenu ( cls.driver )
@@ -127,7 +127,7 @@ class GuineenewsStartPageTest ( unittest.TestCase ):
     @classmethod
     def tearDownClass(cls) -> None:
         if cls.driver is not None:
-            cls.driver.implicitly_wait ( 5 )
+            #cls.driver.implicitly_wait (5)
             sleep ( 5 )
             cls.driver.close ()
             # cls.driver.quit
