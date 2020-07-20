@@ -13,16 +13,16 @@ class GuineenewsMenu(BasePage):
     menu_acceuil = "//ul[@id='menu-mainmenu-1']/li[1]/a"
     menu_news = "//ul[@id='menu-mainmenu-1']/li[2]/a"
     menu_grands_dossiers = "//ul[@id='menu-mainmenu-1']/li[3]/a"
-    menu_interviews = "//ul[@id='menu-mainmenu-1']/li[4]/a"
+    menu_interviews      = "//ul[@id='menu-mainmenu-1']/li[4]/a"
     menu_publireportage = "//ul[@id='menu-mainmenu-1']/li[5]/a"
     menu_region = "//ul[@id='menu-mainmenu-1']/li[6]/a"
     menu_sport = "//ul[@id='menu-mainmenu-1']/li[7]/a"
     menu_le_monde = "//ul[@id='menu-mainmenu-1']/li[8]/a"
 
     sub_menus_news = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a"
-    sub_menus_grandossiers="//ul[@id='menu-mainmenu-1']/li[3]/ul[@class='sub-menu']//h3[@class='entry-title td-module-title']"
-    sub_menus_publireportage = "//ul[@id='menu-mainmenu-1']/li[5]/ul//child::div[@class='block-mega-child-cats']/a"
-    sub_menus_region = sub_menus_news = "//ul[@id='menu-mainmenu-1']/li[6]/ul//child::div[@class='block-mega-child-cats']/a"
+    sub_menus_grandossiers  = "//ul[@id='menu-mainmenu-1']/li[3]/ul//child::h3[@class='entry-title td-module-title']/a"
+    sub_menus_publireportage = "//ul[@id='menu-mainmenu-1']/li[5]/ul//child::h3[@class='entry-title td-module-title']/a"
+    sub_menus_region         = "//ul[@id='menu-mainmenu-1']/li[6]/ul//child::div[@class='block-mega-child-cats']/a"
 
     sub_menu_tous = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[1]"
     sub_menu_art_et_culture = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[2]"
@@ -67,7 +67,7 @@ class GuineenewsMenu(BasePage):
         if menu_locator == "News":
             self.moveMouseOnElement(self.menu_news,locatorType)
 
-        if menu_locator == "Grand_Dossiers":
+        if menu_locator == "Grands_Dossiers":
             self.moveMouseOnElement(self.menu_grands_dossiers,locatorType)
 
         if menu_locator == "Publireportage":
@@ -75,57 +75,63 @@ class GuineenewsMenu(BasePage):
 
         if menu_locator == "Region":
             self.moveMouseOnElement(self.menu_region,locatorType)
+        #sleep(2)
 
     def go_to_news_sub_rubrique(self, sub_rubrique, locatorType="xpath"):
 
+        self.move_mouse_on ( "News", locatorType )
+        #sleep(3)
         if sub_rubrique == "Tous":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_tous, "xpath" )
+            element = self.waitForElementToBe(self.sub_menu_tous)
+            self.clickElement(element=element)
             # self.waitForElementToBe(self.menu, "id")
 
         if sub_rubrique == "art_et_culture":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_art_et_culture, "xpath" )
+            element = self.waitForElementToBe (self.sub_menu_art_et_culture)
+            self.clickElement(element=element)
 
         if sub_rubrique == "Economie":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_economie, "xpath" )
+            element = self.waitForElementToBe (self.sub_menu_economie)
+            self.clickElement ( element=element )
 
         if sub_rubrique == "Faits_Divers":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_faits_divers, "xpath" )
+            element = self.waitForElementToBe (self.sub_menu_faits_divers)
+            self.clickElement (element=element)
 
         if sub_rubrique == "Politique":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_politique, "xpath" )
+            element = self.waitForElementToBe ( self.sub_menu_politiques )
+            self.clickElement ( element=element )
 
         if sub_rubrique == "Societe":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_societe, "xpath" )
+            element = self.waitForElementToBe ( self.sub_menu_societe,locatorType="xpath", event="visible" )
+            self.clickElement ( element=element )
 
         if sub_rubrique == "Revue_de_presse":
-            self.move_mouse_on_main_menu_element(self.menu_news)
-            self.clickElement ( self.sub_menu_revue_de_presse, "xpath" )
+            element = self.waitForElementToBe ( self.sub_menu_revue_de_presse )
+            self.clickElement ( element=element )
 
-        if sub_rubrique == "Le_monde":
-            self.clickElement ( self.menu_le_monde, "xpath" )
+        #if sub_rubrique == "Le_monde":
+         #   self.clickElement ( self.menu_le_monde, "xpath" )
 
     def click_random_sub_article_in(self, menu, locatorType="xpath"):
 
         if menu == "Region":
             sub_menus = self.sub_menus_region
             main_menu = self.menu_region
-        if menu == "Publi_reportage":
+        if menu == "Publireportage":
             sub_menus = self.sub_menus_publireportage
             main_menu = self.menu_publireportage
-        if menu == "Grands_dossiers":
+        if menu == "Grands_Dossiers":
+            #self.logger.warning(self.sub_menus_grandossiers)
             sub_menus = self.sub_menus_grandossiers
             main_menu = self.menu_grands_dossiers
 
         self.move_mouse_on_main_menu_element (menu)
-        sleep(2)
+        #sleep(2)
         #if menu == "menu_grands_dossiers":
         articles = self.getElements(sub_menus, "xpath")
+        if menu == "Grands_Dossiers":
+            self.logger.warning(str(len(articles)))
         if len(articles) > 0:
             random_index = random.randint(1, len(articles))
             self.clickListElement(sub_menus,locatorType,random_index)

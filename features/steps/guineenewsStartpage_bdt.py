@@ -29,31 +29,53 @@ class GuineenewsStratPage(unittest.TestCase):
     #def before_step(self):
        # use_fixture( self.getMenuPage )
 
-    @given ('i start the site guineenews')
+    @given ('I start the site guineenews')
     def step_impl(context):
         try:
             context.driver.get(Pages.getPageURL ( "guineenewsStartPage" ))
             context.startPage = GuineenewsStartPage ( context.driver )
+            context.menuPage = GuineenewsMenu(context.driver)
         except Exception as error:
             context.logger.error(error)
+            context.startPage.takescreenShotOnError("i start_the_site_guineenews")
 
-    @when ('i click on politique')
+    @when ('I click on politique')
     def step_impl(context):
         try:
-            #menuPage = GuineenewsMenu ( context.driver )
-            #startPage = GuineenewsStartPage(context.driver)
             context.startPage.go_to_rubrique ( "Sport" )
-            context.logger.info("whatsapp")
-            #menuPage.move_mouse_on ( "Politique" )
-            sleep ( 3 )
+            sleep ( 2 )
         except Exception as error:
             context.logger.error ( error )
+            context.startPage.takescreenShotOnError("i_click_on_politique")
 
-    @then('i click on societe')
+    @then('I click on societe')
     def step_impl(context):
         try:
-            #context.menuPage = GuineenewsMenu ( context.driver )
-            #context.startPage = GuineenewsStartPage ( context.driver)
-            context.startPage.go_to_rubrique ("Le_monde")
+            context.menuPage.go_to_news_sub_rubrique ("Societe")
         except Exception as error:
             context.logger.error(error)
+            context.startPage.takescreenShotOnError("i_click_on_societe")
+
+    @then('I click a random Region')
+    def step_impl(context):
+        try:
+            context.menuPage.click_random_sub_article_in( "Region" )
+        except Exception as error:
+            context.logger.error(error)
+            context.menuPage.takescreenShotOnError("I_click_a_random_region")
+
+    @then ( 'I click a random grands dossiers' )
+    def step_impl(context):
+        try:
+            context.menuPage.click_random_sub_article_in ( "Grands_Dossiers" )
+        except Exception as error:
+            context.logger.error ( error )
+            context.menuPage.takescreenShotOnError ( "I_click_a_random_grands_dossiers" )
+
+    @then('I click a random publireportage')
+    def step_impl(context):
+        try:
+            context.menuPage.click_random_sub_article_in( "Publireportage" )
+        except Exception as error:
+            context.logger.error(error)
+            context.menuPage.takescreenShotOnError("I_click_a_random_publireportage")

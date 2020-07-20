@@ -1,6 +1,9 @@
 Feature: showing off behave
 
   Scenario: run a simple test
-     Given i start the site guineenews
-      When i click on politique
-      Then i click on societe
+     Given I start the site guineenews
+      When I click on politique
+      Then I click on societe
+      Then I click a random Region
+      Then I click a random grands dossiers
+      Then I click a random publireportage
