@@ -20,7 +20,8 @@ class Pages():
     def getPageURL(cls, page):
         try:
             if page is not None:
-                return cls.pagelist[page]['pageUrl']
+                return page['pageUrl']
+                #return cls.pagelist[page]['pageUrl']
         except Exception as e:
             print("page is null")
 
@@ -28,7 +29,8 @@ class Pages():
     def getPageTitle(self, page):
         try:
             if page is not None:
-                return self.pagelist[page]['pageTitle']
+                return page['pageTitle']
+                #return self.pagelist[page]['pageTitle']
         except Exception as e:
             print("page is null")
 

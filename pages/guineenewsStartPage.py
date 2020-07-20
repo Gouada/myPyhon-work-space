@@ -1,3 +1,4 @@
+from constants.guineenewsMenu_cats import Menu
 from pages.basePage import BasePage
 from utils.logger import MyLogger
 import logging
@@ -36,66 +37,66 @@ class GuineenewsStartPage(BasePage):
             self.logger.error(error)
 
     def go_to_rubrique(self, rubrique, locatorType="xpath"):
-        if rubrique == "Acceuil":
+        if rubrique == Menu.Acceuil:
             self.clickElement ( self.menu_acceuil, "xpath" )
             # self.waitForElementToBe(self.menu, "id")
 
-        if rubrique == "News":
+        if rubrique == Menu.News:
             self.clickElement ( self.menu_news, "xpath" )
 
-        if rubrique == "Grands_Dossiers":
+        if rubrique == Menu.Grands_Dossiers:
             self.clickElement ( self.menu_grands_dossiers, "xpath" )
 
-        if rubrique == "Interviews":
+        if rubrique == Menu.Interviews:
             self.clickElement ( self.menu_interviews, "xpath" )
 
-        if rubrique == "Publireportage":
+        if rubrique == Menu.Publireportage:
             self.clickElement ( self.menu_publireportage, "xpath" )
 
-        if rubrique == "Region":
+        if rubrique == Menu.Region:
             self.clickElement ( self.menu_region, "xpath" )
 
-        if rubrique == "Sport":
+        if rubrique == Menu.Sport:
             self.clickElement ( self.menu_sport, "xpath" )
 
-        if rubrique == "Le_monde":
+        if rubrique == Menu.Le_Monde:
             self.clickElement ( self.menu_le_monde, "xpath" )
 
     def go_to_sub_rubrique(self, sub_rubrique, locatorType="xpath"):
 
-        if sub_rubrique == "Tous":
+        if sub_rubrique == Menu.Tous:
             self.clickElement ( self.sub_menu_tous, "xpath" )
             # self.waitForElementToBe(self.menu, "id")
 
-        if sub_rubrique == "art_et_culture":
+        if sub_rubrique == Menu.Art_et_Culture:
             self.clickElement ( self.sub_menu_art_et_culture, "xpath" )
 
-        if sub_rubrique == "Economie":
+        if sub_rubrique == Menu.Economie:
             self.clickElement ( self.sub_menu_economie, "xpath" )
 
-        if sub_rubrique == "Faits_Divers":
+        if sub_rubrique == Menu.Faits_Divers:
             self.clickElement ( self.sub_menu_faits_divers, "xpath" )
 
-        if sub_rubrique == "Politique":
+        if sub_rubrique == Menu.Politique:
             self.clickElement ( self.sub_menu_politique, "xpath" )
 
-        if sub_rubrique == "Societe":
+        if sub_rubrique == Menu.Societe:
             self.clickElement ( self.sub_menu_societe, "xpath" )
 
-        if sub_rubrique == "Revue_de_presse":
+        if sub_rubrique == Menu.Revue_de_presse:
             self.clickElement ( self.sub_menu_revue_de_presse, "xpath" )
 
-        if sub_rubrique == "Le_monde":
+        if sub_rubrique == Menu.Le_Monde:
             self.clickElement ( self.menu_le_monde, "xpath" )
 
     def move_mouse_on(self, menu_locator, locatorType="xpath"):
-        if menu_locator == "News":
+        if menu_locator == Menu.News:
             self.moveMouseOnElement(self.menu_news,locatorType)
 
-        if menu_locator == "Politique":
+        if menu_locator == Menu.Politique:
             self.moveMouseOnElement(self.sub_menu_politique,locatorType)
 
-        if menu_locator == "Revue":
+        if menu_locator == Menu.Revue_de_presse:
             self.moveMouseOnElement(self.sub_menu_revue_de_presse,locatorType)
 
     def search(self, txt):
