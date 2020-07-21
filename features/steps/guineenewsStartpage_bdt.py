@@ -49,7 +49,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.go_to_news_sub_rubrique(Menu.Politique)
-            sleep ( 2 )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error ( error )
@@ -59,6 +59,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.go_to_news_sub_rubrique (Menu.Societe)
+            sleep ( 3 )
         except Exception as error:
             fail('Step fail with {}'.format(str(error)) )
             context.logger.error(error)
@@ -68,6 +69,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.click_random_sub_article_in( Menu.Region )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error(error)
@@ -77,6 +79,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.click_random_sub_article_in ( Menu.Grands_Dossiers )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error ( error )
@@ -86,6 +89,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.click_random_sub_article_in( Menu.Publireportage )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error(error)
