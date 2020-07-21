@@ -14,7 +14,7 @@ class MyChromeDriverManager(MyWebDriverManager):
         options = webdriver.ChromeOptions ()
         options.add_argument ( '--ignore-certificate-errors' )
         options.add_argument ( '--ignore-ssl-errors' )
-        self.driver = webdriver.Chrome(executable_path="C:\\MyWorkspace\\SeleniumChromeDriver\\83\\chromedriver.exe", chrome_options=options)
+        self.driver = webdriver.Chrome(executable_path="C:\\MyWorkspace\\SeleniumChromeDriver\\83\\chromedriver.exe", options=options)
         self.driver.maximize_window()
         return self.driver
 

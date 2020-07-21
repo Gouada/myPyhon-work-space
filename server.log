@@ -1,80 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-2020.07.17 13:02:43 - GuineenewsStartPageTest INFO driver was successfuly created
-2020.07.17 13:02:43 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.17 13:02:43 - GuineenewsMenu INFO xpath
-2020.07.17 13:02:43 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.17 13:02:43 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/a"}
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.17 13:02:44 - GuineenewsMenu INFO taking screenshot ... click1594983763.8809352.png
-2020.07.17 13:02:44 - GuineenewsMenu ERROR move_to requires a WebElement
-2020.07.17 13:02:46 - GuineenewsMenu INFO xpath
-2020.07.17 13:02:46 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]
-2020.07.17 13:02:46 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]"}
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.17 13:02:46 - GuineenewsMenu INFO taking screenshot ... click1594983766.2162163.png
-2020.07.17 13:02:46 - GuineenewsMenu ERROR move_to requires a WebElement
-2020.07.17 13:02:48 - GuineenewsMenu INFO xpath
-2020.07.17 13:02:48 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]
-2020.07.17 13:02:48 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"}
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.17 13:02:48 - GuineenewsMenu INFO taking screenshot ... click1594983768.5323544.png
-2020.07.17 13:02:48 - GuineenewsMenu ERROR move_to requires a WebElement
-2020.07.17 13:02:50 - GuineenewsMenu INFO xpath
-2020.07.17 13:02:50 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]
-2020.07.17 13:02:50 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"}
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.17 13:02:51 - GuineenewsMenu INFO taking screenshot ... click1594983770.86392.png
-2020.07.17 13:02:51 - GuineenewsMenu ERROR move_to requires a WebElement
-2020.07.17 13:02:53 - GuineenewsMenu INFO xpath
-2020.07.17 13:02:53 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
-2020.07.17 13:02:54 - GuineenewsMenu ERROR move_to requires a WebElement
-=======
-2020.07.17 18:34:45 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.17 18:34:45 - GuineenewsStartPage INFO xpath
-2020.07.17 18:34:45 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[7]/a
-2020.07.17 18:34:45 - setUpClass INFO whatsapp
-2020.07.17 18:34:48 - GuineenewsStartPage INFO xpath
-2020.07.17 18:34:48 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[8]/a
->>>>>>> bdt_branch
-=======
-2020.07.21 11:51:00 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.21 11:51:00 - GuineenewsMenu INFO xpath
-2020.07.21 11:51:00 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.21 11:51:03 - GuineenewsMenu INFO xpath
-2020.07.21 11:51:03 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.21 11:51:05 - GuineenewsMenu INFO xpath
-2020.07.21 11:51:05 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
-2020.07.21 11:51:05 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[6]/a"}
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.21 11:51:06 - GuineenewsMenu INFO taking screenshot ... click1595325065.7250435.png
-2020.07.21 11:51:06 - GuineenewsMenu ERROR move_to requires a WebElement
-2020.07.21 11:53:18 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.21 11:53:18 - GuineenewsMenu INFO xpath
-2020.07.21 11:53:18 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.21 11:53:21 - GuineenewsMenu INFO xpath
-2020.07.21 11:53:21 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.21 11:53:26 - GuineenewsMenu INFO xpath
-2020.07.21 11:53:26 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
-2020.07.21 11:53:31 - GuineenewsMenu INFO xpath
-2020.07.21 11:53:31 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[3]/a
-2020.07.21 11:53:33 - GuineenewsMenu INFO xpath
-2020.07.21 11:53:33 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[5]/a
-2020.07.21 11:53:33 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[5]/a"}
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.21 11:53:33 - GuineenewsMenu INFO taking screenshot ... click1595325213.345904.png
-2020.07.21 11:53:33 - GuineenewsMenu ERROR move_to requires a WebElement
-2020.07.21 11:55:10 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.21 11:55:10 - GuineenewsMenu INFO xpath
-2020.07.21 11:55:10 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.21 11:55:14 - GuineenewsMenu INFO xpath
-2020.07.21 11:55:14 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
-2020.07.21 11:55:30 - GuineenewsMenu ERROR Message: 
-
->>>>>>> bdt_branch
+2020.07.21 15:04:05 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.21 15:04:05 - GuineenewsMenu INFO xpath
+2020.07.21 15:04:05 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 15:04:09 - GuineenewsMenu INFO xpath
+2020.07.21 15:04:09 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 15:04:14 - GuineenewsMenu INFO xpath
+2020.07.21 15:04:14 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.21 15:04:17 - GuineenewsMenu INFO xpath
+2020.07.21 15:04:17 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[3]/a
+2020.07.21 15:04:21 - GuineenewsMenu INFO xpath
+2020.07.21 15:04:21 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[5]/a
+2020.07.21 15:05:17 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.21 15:05:17 - GuineenewsMenu INFO xpath
+2020.07.21 15:05:17 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 15:05:20 - GuineenewsMenu INFO xpath
+2020.07.21 15:05:20 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 15:05:25 - GuineenewsMenu INFO xpath
+2020.07.21 15:05:25 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.21 15:05:30 - GuineenewsMenu INFO xpath
+2020.07.21 15:05:30 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[3]/a
+2020.07.21 15:05:34 - GuineenewsMenu INFO xpath
+2020.07.21 15:05:34 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[5]/a
+2020.07.21 15:12:09 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.21 15:12:09 - GuineenewsMenu INFO xpath
+2020.07.21 15:12:09 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 15:12:12 - GuineenewsMenu INFO xpath
+2020.07.21 15:12:12 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 15:12:16 - GuineenewsMenu INFO xpath
+2020.07.21 15:12:16 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.21 15:12:19 - GuineenewsMenu INFO xpath
+2020.07.21 15:12:19 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[3]/a
+2020.07.21 15:12:23 - GuineenewsMenu INFO xpath

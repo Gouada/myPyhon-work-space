@@ -40,6 +40,8 @@ class GuineenewsStratPage(unittest.TestCase):
             context.driver.get(Urls.startPage_guineenews)
             context.startPage = GuineenewsStartPage ( context.driver )
             context.menuPage = GuineenewsMenu(context.driver)
+            sleep(2)
+            context.startPage.scrollUpToTop()
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error(error)
