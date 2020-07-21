@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2020.07.17 13:02:43 - GuineenewsStartPageTest INFO driver was successfuly created
 2020.07.17 13:02:43 - GuineenewsStartPage INFO StartPage successfully created
 2020.07.17 13:02:43 - GuineenewsMenu INFO xpath
@@ -39,4 +40,41 @@
 2020.07.17 18:34:45 - setUpClass INFO whatsapp
 2020.07.17 18:34:48 - GuineenewsStartPage INFO xpath
 2020.07.17 18:34:48 - GuineenewsStartPage INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[8]/a
+>>>>>>> bdt_branch
+=======
+2020.07.21 11:51:00 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.21 11:51:00 - GuineenewsMenu INFO xpath
+2020.07.21 11:51:00 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 11:51:03 - GuineenewsMenu INFO xpath
+2020.07.21 11:51:03 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 11:51:05 - GuineenewsMenu INFO xpath
+2020.07.21 11:51:05 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.21 11:51:05 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[6]/a"}
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.21 11:51:06 - GuineenewsMenu INFO taking screenshot ... click1595325065.7250435.png
+2020.07.21 11:51:06 - GuineenewsMenu ERROR move_to requires a WebElement
+2020.07.21 11:53:18 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.21 11:53:18 - GuineenewsMenu INFO xpath
+2020.07.21 11:53:18 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 11:53:21 - GuineenewsMenu INFO xpath
+2020.07.21 11:53:21 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 11:53:26 - GuineenewsMenu INFO xpath
+2020.07.21 11:53:26 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[6]/a
+2020.07.21 11:53:31 - GuineenewsMenu INFO xpath
+2020.07.21 11:53:31 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[3]/a
+2020.07.21 11:53:33 - GuineenewsMenu INFO xpath
+2020.07.21 11:53:33 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[5]/a
+2020.07.21 11:53:33 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//ul[@id='menu-mainmenu-1']/li[5]/a"}
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.21 11:53:33 - GuineenewsMenu INFO taking screenshot ... click1595325213.345904.png
+2020.07.21 11:53:33 - GuineenewsMenu ERROR move_to requires a WebElement
+2020.07.21 11:55:10 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.21 11:55:10 - GuineenewsMenu INFO xpath
+2020.07.21 11:55:10 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 11:55:14 - GuineenewsMenu INFO xpath
+2020.07.21 11:55:14 - GuineenewsMenu INFO .....myLocator..................................................//ul[@id='menu-mainmenu-1']/li[2]/a
+2020.07.21 11:55:30 - GuineenewsMenu ERROR Message: 
+
 >>>>>>> bdt_branch

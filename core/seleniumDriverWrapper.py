@@ -71,9 +71,11 @@ class SeleniumDriverWrapper:
         except (Exception, NoSuchElementException) as error:
             self.logger.error(error)
 
-    def clickElement(self, myLocator, locatorType="id"):
+    def clickElement(self, myLocator="None", locatorType="id", element=None):
         try:
-            self.getElement(myLocator, locatorType).click()
+            if element == None:
+                element = self.getElement(myLocator, locatorType)
+            element.click()
         except ElementNotVisibleException as error:
             self.logger.error(error)
 
@@ -178,7 +180,7 @@ class SeleniumDriverWrapper:
             self.takescreenShotOnError()
             self.logger.error(error)
 
-    def waitForElementToBe(self, myLocator, locatorType, timeout=15, poll_frequency=.5, element=None,event="clickable"):
+    def waitForElementToBe(self, myLocator, locatorType="xpath", timeout=15, poll_frequency=.5, element=None,event="clickable"):
         try:
             #wt = WebDriverWait(self.driver,10)
             wt = WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll_frequency,
