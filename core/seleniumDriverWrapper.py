@@ -168,7 +168,7 @@ class SeleniumDriverWrapper:
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
-    def clickListElement(self, myLocator, locatorType, elementPosition, element=None):
+    def clickListElement(self, myLocator=None, locatorType="xpath", elementPosition=0, element=None):
         try:
 
             if element is None:

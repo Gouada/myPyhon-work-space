@@ -23,3 +23,10 @@ class Menu():
     Haute_Guinnee = 'Haute_Guinnee'
     Guinnee_Forestiere = 'Guinnee_Forestiere'
     Moyenne_Guinnee = 'Moyenne_Guinnee'
+
+    Filter_cretaria_Dernier = "Dernier"
+    Filter_cretaria_vedette = "Les articles en vedettes"
+    Filter_cretaria_plus_populaire = "Plus populaire"
+    Filter_cretaria_7_j_populaire = "7 jours populaire"
+    Filter_cretaria_mieux_notes = "Les mieux notes"
+    Filter_cretaria_hasard = "au hasard"

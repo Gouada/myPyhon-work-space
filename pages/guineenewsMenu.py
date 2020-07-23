@@ -33,6 +33,14 @@ class GuineenewsMenu(BasePage):
     sub_menu_revue_de_presse = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"
     sub_menu_societe = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"
 
+    search_icon = 'td-header-search-button' #"//a[@id='td-header-search-button']"
+    search_field = 'td-header-search' #"//input[@id='td-header-search']"
+    search_btn = 'td-header-search-top' #"//input[@id='td-header-search-top']"
+
+    articles_filter = "//div[contains(@class,'td-subcat-more') and contains(text(), 'Dernier')]"
+    filter_ul = "//div[@class='td-pulldown-filter-display-option']//child::ul[@class='td-pulldown-filter-list']"
+    filter_lis = "//div[@class='td-pulldown-filter-display-option']//child::li[@class='td-pulldown-filter-item']"
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
@@ -147,3 +155,30 @@ class GuineenewsMenu(BasePage):
 
         if menu_locator == Menu.Societe:
             self.moveMouseOnElement(self.sub_menu_societe,locatorType)
+
+    def search(self, txt):
+        self.clickElement(self.search_icon)
+        searchField_input = self.waitForElementToBe( self.search_field, "id", event="visible" )
+        self.clearField(element=searchField_input)
+        self.typeTextInField(text=txt, element=searchField_input)
+        self.clickElement(self.search_btn, "id")
+
+    def select_from_derniers_drop_down_Menu(self, criteria):
+
+        self.moveMouseOnElement(self.derniers_drop_down, "xpath")
+        filter_elements = self.waitForElementToBe(self.filter_lis, locatorType="xpath",event="clickable")
+
+        if(criteria == Menu.Filter_cretaria_vedette):
+            self.clickListElement(elementPosition=1, element=filter_elements)
+
+        if (criteria == Menu.Filter_cretaria_plus_populaire):
+            self.clickListElement ( elementPosition=2, element=filter_elements )
+
+        if (criteria == Menu.Filter_cretaria_7_j_populaire):
+            self.clickListElement ( elementPosition=3, element=filter_elements )
+
+        if (criteria == Menu.Filter_cretaria_mieux_notes):
+            self.clickListElement ( elementPosition=4, element=filter_elements )
+
+        if (criteria == Menu.Filter_cretaria_hasard):
+            self.clickListElement ( elementPosition=5, element=filter_elements )
