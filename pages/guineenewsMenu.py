@@ -157,11 +157,13 @@ class GuineenewsMenu(BasePage):
             self.moveMouseOnElement(self.sub_menu_societe,locatorType)
 
     def search(self, txt):
+        self.logger.warning("Hey I came here .......................")
         self.clickElement(self.search_icon)
         searchField_input = self.waitForElementToBe( self.search_field, "id", event="visible" )
         self.clearField(element=searchField_input)
         self.typeTextInField(text=txt, element=searchField_input)
         self.clickElement(self.search_btn, "id")
+        self.logger.warning("Hey I came here .............and finished ..........")
 
     def select_from_derniers_drop_down_Menu(self, criteria):
 
