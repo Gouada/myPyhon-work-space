@@ -11,6 +11,8 @@ class GuineenewsMenu(BasePage):
     mylg=MyLogger()
     logger = mylg.customLogger(logging.DEBUG)
 
+    logo = "//div[@class='td-main-menu-logo td-logo-in-header td-logo-sticky']/a[@class='td-main-logo']"
+
     menu_acceuil = "//ul[@id='menu-mainmenu-1']/li[1]/a"
     menu_news = "//ul[@id='menu-mainmenu-1']/li[2]/a"
     menu_grands_dossiers = "//ul[@id='menu-mainmenu-1']/li[3]/a"
@@ -27,9 +29,9 @@ class GuineenewsMenu(BasePage):
 
     sub_menu_tous = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[1]"
     sub_menu_art_et_culture = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[2]"
-    sub_menu_economie = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[3]"
     sub_menu_faits_divers = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[4]"
-    sub_menu_politique = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]"
+    sub_menu_economie = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[3]"
+    sub_menu_politique ="//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]"
     sub_menu_revue_de_presse = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"
     sub_menu_societe = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"
 
@@ -40,6 +42,8 @@ class GuineenewsMenu(BasePage):
     articles_filter = "//div[contains(@class,'td-subcat-more') and contains(text(), 'Dernier')]"
     filter_ul = "//div[@class='td-pulldown-filter-display-option']//child::ul[@class='td-pulldown-filter-list']"
     filter_lis = "//div[@class='td-pulldown-filter-display-option']//child::li[@class='td-pulldown-filter-item']"
+
+    filter_result_list = "//div[@class='td-ss-main-content']//h3/a"
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -89,7 +93,7 @@ class GuineenewsMenu(BasePage):
     def go_to_news_sub_rubrique(self, sub_rubrique, locatorType="xpath"):
 
         self.move_mouse_on ( Menu.News, locatorType )
-        #sleep(3)
+        sleep(3)
         if sub_rubrique == Menu.Tous:
             element = self.waitForElementToBe(self.sub_menu_tous)
             self.clickElement(element=element)
@@ -100,8 +104,9 @@ class GuineenewsMenu(BasePage):
             self.clickElement(element=element)
 
         if sub_rubrique == Menu.Economie:
-            element = self.waitForElementToBe (self.sub_menu_economie)
+            element = self.waitForElementToBe (self.sub_menu_economie, locatorType=locatorType, event="visible")
             self.clickElement ( element=element )
+            #self.clickElement ( self.sub_menu_economie, locatorType )
 
         if sub_rubrique == Menu.Faits_Divers:
             element = self.waitForElementToBe (self.sub_menu_faits_divers)
@@ -157,17 +162,15 @@ class GuineenewsMenu(BasePage):
             self.moveMouseOnElement(self.sub_menu_societe,locatorType)
 
     def search(self, txt):
-        self.logger.warning("Hey I came here .......................")
         self.clickElement(self.search_icon)
         searchField_input = self.waitForElementToBe( self.search_field, "id", event="visible" )
         self.clearField(element=searchField_input)
         self.typeTextInField(text=txt, element=searchField_input)
         self.clickElement(self.search_btn, "id")
-        self.logger.warning("Hey I came here .............and finished ..........")
 
     def select_from_derniers_drop_down_Menu(self, criteria):
 
-        self.moveMouseOnElement(self.derniers_drop_down, "xpath")
+        self.moveMouseOnElement(self.articles_filter, "xpath")
         filter_elements = self.waitForElementToBe(self.filter_lis, locatorType="xpath",event="clickable")
 
         if(criteria == Menu.Filter_cretaria_vedette):
@@ -184,3 +187,6 @@ class GuineenewsMenu(BasePage):
 
         if (criteria == Menu.Filter_cretaria_hasard):
             self.clickListElement ( elementPosition=5, element=filter_elements )
+
+    def click_logo(self):
+        self.clickElement(myLocator=self.logo,locatorType="xpath")

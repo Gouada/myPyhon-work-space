@@ -2,19 +2,17 @@
 import unittest
 from time import sleep
 
+import pytest
+from behave import *  # given, when, then
 from pytest import fail
 
-from utils.logger import MyLogger
-from behave import * #given, when, then
-from constants.pages import Pages
-from core.driverFactory import MyDriverFactory
-from pages.guineenewsStartPage import GuineenewsStartPage
+from constants.guineenewsMenu_cats import Menu
+from constants.urls import Urls
 from pages.guineenewsMenu import GuineenewsMenu
 from pages.guineenewsStartPage import GuineenewsStartPage
-import logging
-from constants.urls import Urls
-from constants.guineenewsMenu_cats import Menu
 
+
+@pytest.mark.usefixtures
 class GuineenewsStratPage(unittest.TestCase):
 
 

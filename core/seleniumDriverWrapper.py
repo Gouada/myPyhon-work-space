@@ -26,7 +26,7 @@ class SeleniumDriverWrapper:
 
 
     def getByType(self, locatorType):
-        #webdriver.Chrome.m
+        #webdriver.Chrome.fo
         wb=None
         try:
             if locatorType.upper() == "ID":
@@ -53,8 +53,8 @@ class SeleniumDriverWrapper:
         byType=None
         try:
             byType = self.getByType(locatorType)
-            self.logger.info(byType)
-            self.logger.info(".....myLocator.................................................."+myLocator)
+            #self.logger.info(byType)
+            #self.logger.info(".....myLocator.................................................."+myLocator)
             el = self.driver.find_element(byType, myLocator)
             return el
         except (Exception, NoSuchElementException) as error:
@@ -77,12 +77,12 @@ class SeleniumDriverWrapper:
                 element = self.getElement(myLocator, locatorType)
             element.click()
         except ElementNotVisibleException as error:
-            self.logger.error(error)
+            self.logger.error(str(error))
 
     def typeTextInField(self, myLocator='', locatorType="id",text='', element=None):
         try:
             if element is None:
-                self.logger.warning("Elment is None ........................**********")
+                #self.logger.warning("Elment is None ........................**********")
                 element = self.getElement(myLocator, locatorType)
             element.send_keys(text)
         except ElementNotVisibleException as error:
@@ -168,6 +168,9 @@ class SeleniumDriverWrapper:
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
+    def is_text_present(self, text):
+        return str ( text ) in self.driver.page_source
+
     def clickListElement(self, myLocator=None, locatorType="xpath", elementPosition=0, element=None):
         try:
 
@@ -180,7 +183,19 @@ class SeleniumDriverWrapper:
             self.takescreenShotOnError()
             self.logger.error(error)
 
-    def waitForElementToBe(self, myLocator, locatorType="xpath", timeout=15, poll_frequency=.5, element=None,event="clickable"):
+    def getListElement(self, myLocator=None, locatorType="xpath", elementPosition=0, element=None):
+        try:
+
+            if element is None:
+                element = self.getElements(myLocator,locatorType).__getitem__(elementPosition)
+                #element = self.waitForElementToBe(myLocator, locatorType)
+            return element
+                #self.getElements(myLocator, locatorType).__getitem__(elementPosition).click()
+        except (ElementNotSelectableException, ElementNotVisibleException) as error:
+            self.takescreenShotOnError()
+            self.logger.error(error)
+
+    def waitForElementToBe(self, myLocator, locatorType="xpath", timeout=15, poll_frequency=.5, element=None, event="clickable"):
         try:
             #wt = WebDriverWait(self.driver,10)
             wt = WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll_frequency,
@@ -191,13 +206,14 @@ class SeleniumDriverWrapper:
             if event == 'visible':
                 element = wt.until(EC.presence_of_element_located((byType, myLocator)))
             if event == "clickable":
+                self.logger.warning(".........................."+myLocator+"......."+ str(byType))
                 element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
+                self.logger.warning ( "222.........................." + myLocator )
             else:
                 element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
-
             return element
         except Exception as error:
-            self.logger.error(error)
+            self.logger.error(str(error))
 
     def scrollDownToBottom(self):
         try:
@@ -262,7 +278,6 @@ class SeleniumDriverWrapper:
             self.logger.error(error)
         #finally:
             #self.takescreenShotOnError()
-
 
     def takescreenShotOnError(self, stepname="click"):
         try:
