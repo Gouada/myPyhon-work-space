@@ -1,24 +1,16 @@
-2020.07.23 19:09:42 - GuineenewsMenu WARNING ..........................//div[@class='td-pulldown-filter-display-option']//child::li[@class='td-pulldown-filter-item'].......xpath
-2020.07.23 19:09:43 - GuineenewsMenu WARNING 222..........................//div[@class='td-pulldown-filter-display-option']//child::li[@class='td-pulldown-filter-item']
-2020.07.23 19:13:20 - GuineenewsMenu WARNING ..........................//div[@class='td-pulldown-filter-display-option']//child::li[@class='td-pulldown-filter-item'].......xpath
-2020.07.23 19:13:20 - GuineenewsMenu WARNING 222..........................//div[@class='td-pulldown-filter-display-option']//child::li[@class='td-pulldown-filter-item']
-2020.07.23 19:13:41 - setUpClass ERROR 
-2020.07.23 19:13:44 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/page/2/?s=Alpha+Conde">...</a> is not clickable at point (459, 16). Other element would receive the click: <a href="https://www.guineenews.org">...</a>
+2020.07.24 12:36:03 - setUpClass ERROR list index out of range
+2020.07.24 12:36:10 - setUpClass ERROR 
+2020.07.24 12:36:33 - setUpClass ERROR Message: element not interactable
   (Session info: chrome=84.0.4147.89)
 
-2020.07.23 19:14:06 - setUpClass ERROR 
-2020.07.23 19:14:09 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/page/2/?s=Cellou+Dalein">...</a> is not clickable at point (452, 16). Other element would receive the click: <a href="https://www.guineenews.org">...</a>
+2020.07.24 12:36:44 - setUpClass ERROR 
+2020.07.24 12:37:08 - setUpClass ERROR list index out of range
+2020.07.24 12:37:08 - setUpClass ERROR Message: element not interactable
   (Session info: chrome=84.0.4147.89)
 
-2020.07.23 19:14:20 - GuineenewsMenu ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='td-main-menu-logo td-logo-in-header td-logo-sticky']/a[@class='td-main-logo']"}
+2020.07.24 12:37:20 - setUpClass ERROR 
+2020.07.24 12:37:43 - setUpClass ERROR list index out of range
+2020.07.24 12:37:43 - setUpClass ERROR Message: element not interactable
   (Session info: chrome=84.0.4147.89)
 
-2020.07.23 19:14:20 - setUpClass ERROR 'NoneType' object has no attribute 'click'
-2020.07.23 19:14:33 - setUpClass ERROR 
-2020.07.23 19:14:36 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/page/2/?s=KPC">...</a> is not clickable at point (365, 16). Other element would receive the click: <img src="https://www.guineenews.org/wp-content/uploads/2018/03/LogoGuineenews-1.png" alt="Guinéenews">
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.23 19:14:47 - setUpClass ERROR list index out of range
-2020.07.23 19:14:47 - setUpClass ERROR Message: element not interactable
-  (Session info: chrome=84.0.4147.89)
-
+2020.07.24 12:37:44 - GuineenewsStartPage INFO StartPage successfully created

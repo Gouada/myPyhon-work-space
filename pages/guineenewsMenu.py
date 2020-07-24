@@ -145,7 +145,8 @@ class GuineenewsMenu(BasePage):
         #if menu == "menu_grands_dossiers":
         articles = self.getElements(sub_menus, "xpath")
         if len(articles) > 0:
-            random_index = random.randint(1, len(articles))
+            random_index = random.randint(1, (len(articles)-1))
+            self.logo.warning(str(len(articles)))
             self.clickListElement(sub_menus,locatorType,random_index)
 
     def move_mouse_on(self, menu_locator, locatorType="xpath"):

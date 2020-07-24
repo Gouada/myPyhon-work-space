@@ -33,7 +33,8 @@ class GuineenewsSearchPage(BasePage):
 
         elements = self.getElements(self.result_list, "xpath")
         if len(elements) > 0:
-            random_index = random.randint(0, len(elements))
+            random_index = random.randint(0, (len(elements)-1))
             element = self.getListElement(self.result_list, "xpath", random_index)
-            #self.scrollElementIntoView(element)
+            self.scrollElementIntoView(element)
+            sleep(4)
             self.clickElement(element=element)

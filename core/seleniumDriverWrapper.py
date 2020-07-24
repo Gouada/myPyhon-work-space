@@ -206,9 +206,9 @@ class SeleniumDriverWrapper:
             if event == 'visible':
                 element = wt.until(EC.presence_of_element_located((byType, myLocator)))
             if event == "clickable":
-                self.logger.warning(".........................."+myLocator+"......."+ str(byType))
+                #self.logger.warning(".........................."+myLocator+"......."+ str(byType))
                 element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
-                self.logger.warning ( "222.........................." + myLocator )
+                #self.logger.warning ( "222.........................." + myLocator )
             else:
                 element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
             return element
@@ -243,7 +243,9 @@ class SeleniumDriverWrapper:
 
     def scrollElementIntoView(self, element):
         try:
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            #self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            actions = ActionChains ( self.driver )
+            actions.move_to_element(element).perform()
         except Exception as error:
             self.logger.error(error)
 
