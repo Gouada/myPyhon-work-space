@@ -171,10 +171,12 @@ class SeleniumDriverWrapper:
     def is_text_present(self, text):
         return str ( text ) in self.driver.page_source
 
-    def clickListElement(self, myLocator=None, locatorType="xpath", elementPosition=0, element=None):
+    def clickListElement(self, myLocator=None, locatorType="xpath", elementPosition=0, element=None, elements=None):
         try:
+            if elements is not None:
+                element = elements.__getitem__(elementPosition)
 
-            if element is None:
+            elif element is None and myLocator is not None:
                 element = self.getElements(myLocator,locatorType).__getitem__(elementPosition)
                 #element = self.waitForElementToBe(myLocator, locatorType)
             element.click()

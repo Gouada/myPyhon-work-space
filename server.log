@@ -1,16 +1,18 @@
-2020.07.24 12:36:03 - setUpClass ERROR list index out of range
-2020.07.24 12:36:10 - setUpClass ERROR 
-2020.07.24 12:36:33 - setUpClass ERROR Message: element not interactable
+2020.07.26 00:21:18 - GuineenewsMenu WARNING populaire
+2020.07.26 00:21:51 - GuineenewsMenu WARNING populaire
+2020.07.26 00:22:22 - GuineenewsMenu WARNING populaire
+2020.07.26 00:22:49 - setUpClass ERROR 
+2020.07.26 00:23:20 - setUpClass ERROR Message: element not interactable
   (Session info: chrome=84.0.4147.89)
 
-2020.07.24 12:36:44 - setUpClass ERROR 
-2020.07.24 12:37:08 - setUpClass ERROR list index out of range
-2020.07.24 12:37:08 - setUpClass ERROR Message: element not interactable
+2020.07.26 00:23:33 - setUpClass ERROR 
+2020.07.26 00:24:03 - setUpClass ERROR Message: element not interactable
   (Session info: chrome=84.0.4147.89)
 
-2020.07.24 12:37:20 - setUpClass ERROR 
-2020.07.24 12:37:43 - setUpClass ERROR list index out of range
-2020.07.24 12:37:43 - setUpClass ERROR Message: element not interactable
+2020.07.26 00:24:17 - setUpClass ERROR 
+2020.07.26 00:24:48 - setUpClass ERROR Message: element not interactable
   (Session info: chrome=84.0.4147.89)
 
-2020.07.24 12:37:44 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.26 00:25:06 - GuineenewsMenu WARNING en vedette
+2020.07.26 00:25:32 - GuineenewsMenu WARNING en vedette
+2020.07.26 00:25:58 - GuineenewsMenu WARNING en vedette

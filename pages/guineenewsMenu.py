@@ -93,7 +93,7 @@ class GuineenewsMenu(BasePage):
     def go_to_news_sub_rubrique(self, sub_rubrique, locatorType="xpath"):
 
         self.move_mouse_on ( Menu.News, locatorType )
-        sleep(3)
+        sleep(1)
         if sub_rubrique == Menu.Tous:
             element = self.waitForElementToBe(self.sub_menu_tous)
             self.clickElement(element=element)
@@ -117,8 +117,9 @@ class GuineenewsMenu(BasePage):
             self.clickElement ( element=element )
 
         if sub_rubrique == Menu.Societe:
-            element = self.waitForElementToBe ( self.sub_menu_societe,locatorType="xpath", event="visible" )
+            element = self.waitForElementToBe ( self.sub_menu_societe )
             self.clickElement ( element=element )
+            #self.clickElement ( self.sub_menu_societe )
 
         if sub_rubrique == Menu.Revue_de_presse:
             element = self.waitForElementToBe ( self.sub_menu_revue_de_presse )
@@ -172,22 +173,23 @@ class GuineenewsMenu(BasePage):
     def select_from_derniers_drop_down_Menu(self, criteria):
 
         self.moveMouseOnElement(self.articles_filter, "xpath")
-        filter_elements = self.waitForElementToBe(self.filter_lis, locatorType="xpath",event="clickable")
+        filter_elements = self.getElements(self.filter_lis, locatorType="xpath")
 
         if(criteria == Menu.Filter_cretaria_vedette):
-            self.clickListElement(elementPosition=1, element=filter_elements)
+            #self.clickListElement(elementPosition=1, element=filter_elements)
+            self.clickListElement(elementPosition=1, elements=filter_elements)
 
         if (criteria == Menu.Filter_cretaria_plus_populaire):
-            self.clickListElement ( elementPosition=2, element=filter_elements )
+            self.clickListElement ( elementPosition=2, elements=filter_elements )
 
         if (criteria == Menu.Filter_cretaria_7_j_populaire):
-            self.clickListElement ( elementPosition=3, element=filter_elements )
+            self.clickListElement ( elementPosition=3, elements=filter_elements )
 
         if (criteria == Menu.Filter_cretaria_mieux_notes):
-            self.clickListElement ( elementPosition=4, element=filter_elements )
+            self.clickListElement ( elementPosition=4, elements=filter_elements )
 
         if (criteria == Menu.Filter_cretaria_hasard):
-            self.clickListElement ( elementPosition=5, element=filter_elements )
+            self.clickListElement ( elementPosition=5, elements=filter_elements )
 
     def click_logo(self):
         self.clickElement(myLocator=self.logo,locatorType="xpath")

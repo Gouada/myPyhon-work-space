@@ -6,18 +6,16 @@ from behave import fixture, use_fixture
 
 from core.driverFactory import MyDriverFactory
 from utils.logger import MyLogger
-
+from constants.browser import Browsers
 
 @fixture
 def setUpClass(context):
-    driver = MyDriverFactory.getDriverManager ( "CHROME" ).getDriver()
+    driver = MyDriverFactory.getDriverManager ( Browsers.chrome ).getDriver()
     context.driver = driver
     lg = MyLogger ()
     context.logger = lg.customLogger ( logging.DEBUG )
     yield context.driver
     if context.driver is not None:
-        #context.driver.implicitly_wait ( 5 )
-        sleep ( 5 )
         context.driver.close ()
 
 def before_all(context):

@@ -1,6 +1,5 @@
 Feature: showing off behave
 
- @wip
   Scenario: run a simple test
      Given I start the site guineenews
       When I click on politique

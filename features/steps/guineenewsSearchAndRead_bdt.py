@@ -89,10 +89,16 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error(error)
 
-    @then ( 'I go to sub category economy' )
-    def step_impl(context):
+    @then ( 'I go to sub category "{cat}"' )
+    def step_impl(context, cat):
         try:
-            context.menu.go_to_news_sub_rubrique ( Menu.Economie )
+            if cat == "Economy":
+                context.menu.go_to_news_sub_rubrique ( Menu.Economie )
+            if cat == "Politique":
+                context.menu.go_to_news_sub_rubrique ( Menu.Politique )
+            if cat == "Societe":
+                context.menu.go_to_news_sub_rubrique ( Menu.Societe )
+
             sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
@@ -114,6 +120,14 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error ( error )
 
+    @then ( 'I scroll to bottom' )
+    def step_impl(context):
+        try:
+            context.menu.scrollDownToBottom ()
+            sleep ( 1 )
+        except Exception as error:
+            context.logger.error ( error )
+
     @then ( u'I go back' )
     def step_impl(context):
         try:
@@ -121,10 +135,11 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error ( error )
 
-    @then ( 'I scroll to bottom' )
+    @then ( 'I select les articles en vedette' )
     def step_impl(context):
         try:
-            context.menu.scrollDownToBottom ()
-            sleep ( 1 )
+            context.menu.select_from_derniers_drop_down_Menu ( Menu.Filter_cretaria_vedette )
+            sleep ( 3 )
         except Exception as error:
-            context.logger.error(error)
+            context.logger.error ( error )
+
