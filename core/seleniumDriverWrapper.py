@@ -65,8 +65,8 @@ class SeleniumDriverWrapper:
         :type locator: string
         """
         try:
-            by = self.getByType(locatorType)
-            el = self.driver.find_elements(by, myLocator)
+            byType = self.getByType(locatorType)
+            el = self.driver.find_elements(byType, myLocator)
             return el
         except (Exception, NoSuchElementException) as error:
             self.logger.error(error)

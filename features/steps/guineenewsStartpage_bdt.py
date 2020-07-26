@@ -9,6 +9,7 @@ from pytest import fail
 from constants.guineenewsMenu_cats import Menu
 from constants.urls import Urls
 from pages.guineenewsMenu import GuineenewsMenu
+from pages.guineenewsSerachPage import GuineenewsSearchPage
 from pages.guineenewsStartPage import GuineenewsStartPage
 
 
@@ -38,6 +39,7 @@ class GuineenewsStratPage(unittest.TestCase):
             context.driver.get(Urls.startPage_guineenews)
             context.startPage = GuineenewsStartPage ( context.driver )
             context.menuPage = GuineenewsMenu(context.driver)
+            context.searchPage = GuineenewsSearchPage ( context.driver )
             sleep(2)
             context.startPage.scrollUpToTop()
         except Exception as error:
@@ -60,7 +62,7 @@ class GuineenewsStratPage(unittest.TestCase):
         try:
             #sleep ( 3 )
             context.menuPage.go_to_news_sub_rubrique ( Menu.Societe )
-            #sleep ( 5 )
+            sleep ( 3 )
         except Exception as error:
             fail('Step fail with {}'.format(str(error)) )
             context.logger.error(error)
@@ -70,7 +72,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.click_random_sub_article_in( Menu.Region )
-            #sleep ( 5 )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error(error)
@@ -80,7 +82,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.click_random_sub_article_in ( Menu.Grands_Dossiers )
-            #sleep ( 5 )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error ( error )
@@ -90,7 +92,7 @@ class GuineenewsStratPage(unittest.TestCase):
     def step_impl(context):
         try:
             context.menuPage.click_random_sub_article_in( Menu.Publireportage )
-            #sleep ( 5 )
+            sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error(error)

@@ -103,7 +103,7 @@ class SerachAndReadArticle():
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error ( error )
-            context.startPage.takescreenShotOnError ( "I_go_to_sub_category_economy" )\
+            context.menu.takescreenShotOnError ( "I_go_to_sub_category_economy" )\
 
     @then ( 'I select les plus populaires' )
     def step_impl(context):
