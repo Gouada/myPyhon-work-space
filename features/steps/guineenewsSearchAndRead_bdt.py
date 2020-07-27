@@ -44,13 +44,13 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error(error)
 
-    @then ( 'I scroll to top' )
-    def step_impl(context):
-        try:
-            context.searchPage.scrollUpToTop()
-            sleep(3)
-        except Exception as error:
-            context.logger.error(error)
+    # @then ( 'I scroll to top' )
+    # def step_impl(context):
+    #     try:
+    #         context.searchPage.scrollUpToTop()
+    #         sleep(3)
+    #     except Exception as error:
+    #         context.logger.error(error)
 
     @then ( 'I paginate to next page' )
     def step_impl(context):
@@ -64,7 +64,7 @@ class SerachAndReadArticle():
     def step_impl(context):
         try:
             context.searchPage.click_a_random_search_result()
-            sleep(5)
+            sleep(2)
         except Exception as error:
             context.logger.error(error)
 
@@ -75,12 +75,12 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error(error)
 
-    @then ( 'I select randomly another result' )
-    def step_impl(context):
-        try:
-            context.searchPage.click_a_random_search_result()
-        except Exception as error:
-            context.logger.error(error)
+    # @then ( 'I select randomly another result' )
+    # def step_impl(context):
+    #     try:
+    #         context.searchPage.click_a_random_search_result()
+    #     except Exception as error:
+    #         context.logger.error(error)
 
     @then ( 'I go to start page' )
     def step_impl(context):
@@ -120,10 +120,13 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error ( error )
 
-    @then ( 'I scroll to bottom' )
-    def step_impl(context):
+    @then ( 'I scroll to "{direction}"' )
+    def step_impl(context, direction):
         try:
-            context.menu.scrollDownToBottom ()
+            if direction.upper() == "BOTTOM":
+                context.menu.scrollDownToBottom ()
+            elif direction.upper() == "TOP":
+                context.menu.scrollUpToTop()
             sleep ( 1 )
         except Exception as error:
             context.logger.error ( error )
@@ -143,3 +146,13 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error ( error )
 
+    @then('I click page "{direction}" button')
+    def step_impl(context, direction):
+        try:
+            if direction.upper() == "DOWN":
+                context.menu.pageDown()
+            elif direction.upper == "UP":
+                context.menu.pageUp()
+            sleep(5)
+        except Exception as error:
+            context.logger.error(error)

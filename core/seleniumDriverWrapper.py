@@ -264,6 +264,20 @@ class SeleniumDriverWrapper:
         except Exception as error:
             self.logger.error(error)
 
+    def pageDown(self):
+        try:
+            actions = ActionChains(self.driver)
+            actions.send_keys(Keys.PAGE_DOWN).perform()
+        except Exception as error:
+            self.logger.error(error)
+
+    def pageUp(self):
+        try:
+            actions = ActionChains ( self.driver )
+            actions.send_keys ( Keys.PAGE_UP ).perform ()
+        except Exception as error:
+            self.logger.error(error)
+
     def goBack(self):
         try:
             actions = ActionChains(self.driver)

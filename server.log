@@ -2,3 +2,19 @@
 2020.07.26 23:18:58 - GuineenewsMenu WARNING 5
 2020.07.26 23:19:10 - GuineenewsMenu WARNING 5
 2020.07.26 23:19:33 - GuineenewsMenu WARNING 5
+2020.07.26 23:28:42 - setUpClass ERROR 
+2020.07.26 23:29:16 - setUpClass ERROR Message: element not interactable
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.26 23:29:33 - setUpClass ERROR 
+2020.07.26 23:30:06 - setUpClass ERROR Message: element not interactable
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.26 23:30:22 - setUpClass ERROR 
+2020.07.26 23:30:54 - setUpClass ERROR Message: element not interactable
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.26 23:32:21 - GuineenewsStartPage INFO StartPage successfully created
+2020.07.26 23:32:24 - GuineenewsMenu WARNING 5
+2020.07.26 23:32:38 - GuineenewsMenu WARNING 5
+2020.07.26 23:32:59 - GuineenewsMenu WARNING 5

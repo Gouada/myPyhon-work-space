@@ -9,7 +9,7 @@ Feature: search and read an article
        Then I go to sub category "<cat>"
        Then I select les plus populaires
        Then I select randomly one article
-       Then I scroll to bottom
+       Then I click page down button
        Then I go back
    Examples:
      |cat       |
@@ -26,8 +26,11 @@ Feature: search and read an article
       Then I paginate to next page
       Then I scroll to top
       Then I select randomly one result
+      Then I click page down button
       Then I go back to search result
-      Then I select randomly another result
+      Then I select randomly one result
+      Then I click page down button
+      Then I click page up button
       Then I go to start page
 
       Examples: Test data
