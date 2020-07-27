@@ -38,3 +38,16 @@ class GuineenewsSearchPage(BasePage):
             self.scrollElementIntoView(element)
             sleep(4)
             self.clickElement(element=element)
+
+    def click_a_specific_search_result(self, position):
+
+        elements = self.getElements(self.result_list, "xpath")
+        if len(elements) > 0:
+            if position == "last":
+                article_index = len(elements) -1
+            else:
+                article_index = position
+            element = self.getListElement(self.result_list, "xpath", article_index)
+            self.scrollElementIntoView(element)
+            sleep(3)
+            self.clickElement(element=element)

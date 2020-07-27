@@ -1,0 +1,6 @@
+2020.07.27 16:13:39 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 87). Other element would receive the click: <div class="td-container td-header-row td-header-main-menu">...</div>
+  (Session info: chrome=84.0.4147.89)
+
+2020.07.27 16:20:07 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 87). Other element would receive the click: <div class="td-container td-header-row td-header-main-menu">...</div>
+  (Session info: chrome=84.0.4147.89)
+
