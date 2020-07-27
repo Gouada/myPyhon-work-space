@@ -147,7 +147,7 @@ class GuineenewsMenu(BasePage):
         articles = self.getElements(sub_menus, "xpath")
         if len(articles) > 0:
             random_index = random.randint(1, (len(articles)-1))
-            self.logger.warning(str(len(articles)))
+            #self.logger.warning(str(len(articles)))
             self.clickListElement(myLocator=sub_menus,locatorType=locatorType,elementPosition=random_index)
 
     def move_mouse_on(self, menu_locator, locatorType="xpath"):
