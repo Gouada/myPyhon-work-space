@@ -21,7 +21,7 @@ Feature:  read articles
       | 1   |
       | 10   |
       | 15   |
-
+  @prmth
   Scenario: read previous month archive
     When I go to "previous" month
     Then I paginate to "last" page

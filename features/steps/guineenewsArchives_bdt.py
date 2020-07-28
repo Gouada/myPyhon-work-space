@@ -33,9 +33,10 @@ class GuineenewsArchives ():
             context.logger.error(error)
 
     @when ( u'I go to "{mnt}" month' )
-    def step_impl(context, mtn):
+    def step_impl(context, mnt):
         try:
-            if mtn == "previous":
+            context.archivesPage = GuineenewsArchivesPage ( context.driver )
+            if mnt == "previous":
                 context.archivesPage.click_previous_month()
             else:
                 context.archivesPage.click_next_month()
