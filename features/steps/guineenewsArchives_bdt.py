@@ -19,7 +19,7 @@ class GuineenewsArchives ():
         except Exception as error:
             context.logger.error ( error )
 
-    @then ( u'I open "{pos}" article of that day' )
+    @then ( u'I open "{pos}" article on result page' )
     def step_impl(context, pos):
         try:
             if pos.upper() == "FIRST":
@@ -29,5 +29,24 @@ class GuineenewsArchives ():
             if pos.upper() == "RANDOM":
                 context.searchPage.click_a_random_search_result ()
             sleep(3)
+        except Exception as error:
+            context.logger.error(error)
+
+    @when ( u'I go to "{mnt}" month' )
+    def step_impl(context, mtn):
+        try:
+            if mtn == "previous":
+                context.archivesPage.click_previous_month()
+            else:
+                context.archivesPage.click_next_month()
+        except Exception as error:
+            context.logger.error(error)
+
+    @then ( u'I paginate to "{num}" page' )
+    def step_impl(context, num):
+
+        try:
+            if num == "last":
+                context.searchPage.paginate_to_last_result_page()
         except Exception as error:
             context.logger.error(error)
