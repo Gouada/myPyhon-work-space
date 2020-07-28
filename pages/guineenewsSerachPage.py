@@ -15,7 +15,10 @@ class GuineenewsSearchPage(BasePage):
     pages = "//span[contains(@class, 'pages') and contains(text(), 'Page') and contains(text(), 'sur') ]"
     next_page_icon = "//div['page-nav td-pb-padding-side']/child::a/i[@class='td-icon-menu-right']/parent::a"
     previous_page_icon = "//div['page-nav td-pb-padding-side']/child::a/i[@class='td-icon-menu-left']/parent::a"
+
+    last_page = "//div['page-nav td-pb-padding-side']/child::a[@class='last']"
     result_list = "//div[@class='td-ss-main-content']//child::h3[@class='entry-title td-module-title']/a"
+
 
     logo = "//div[@class='td-main-menu-logo td-logo-in-header td-logo-sticky']/a[@class='td-main-logo']"
 
@@ -57,3 +60,6 @@ class GuineenewsSearchPage(BasePage):
             self.scrollElementIntoView(element)
             sleep(1)
             self.clickElement(element=element)
+
+    def paginate_to_last_result_page(self):
+        self.clickElement(myLocator=self.last_page, locatorType="xpath")

@@ -32,3 +32,8 @@ class GuineenewsArchivesPage(BasePage):
             self.clickListElement ( myLocator=self.calendar_day_having_archives, locatorType="xpath",
                                     elementPosition=day_index )
 
+    def click_previous_month(self):
+        self.clickElement(myLocator=self.previous_month,locatorType="xpath")
+
+    def click_next_month(self):
+        self.clickElement(myLocator=self.next_month,locatorType="xpath")
