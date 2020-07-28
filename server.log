@@ -1,6 +1,12 @@
-2020.07.27 16:13:39 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 87). Other element would receive the click: <div class="td-container td-header-row td-header-main-menu">...</div>
-  (Session info: chrome=84.0.4147.89)
+2020.07.28 02:29:59 - GuineenewsSearchPage ERROR Message: (324, 1339) is out of bounds of viewport width (1536) and height (750)
 
-2020.07.27 16:20:07 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 87). Other element would receive the click: <div class="td-container td-header-row td-header-main-menu">...</div>
-  (Session info: chrome=84.0.4147.89)
+2020.07.28 02:30:18 - setUpClass ERROR Message: Element <a href="https://www.guineenews.org/interdiction-de-la-manif-du-8-juillet-sidya-repond-a-bourema-conde/"> is not clickable at point (727,85) because another element <div class="td-container td-header-row td-header-main-menu"> obscures it
+
+2020.07.28 02:30:50 - GuineenewsSearchPage ERROR Message: (358, 1489) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 02:31:06 - GuineenewsSearchPage ERROR Message: (352, -527) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 02:31:45 - GuineenewsSearchPage ERROR Message: (744, 1666) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 02:31:59 - GuineenewsSearchPage ERROR Message: (747, -553) is out of bounds of viewport width (1536) and height (750)
 

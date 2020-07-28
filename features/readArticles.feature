@@ -8,10 +8,13 @@ Feature:  read articles
     Then I scroll to "bottom"
     When I select the archives of specific "<day>"
     Then I open "first" article of that day
+    Then I click page "down" button
     Then I go back
     Then I open "last" article of that day
+    Then I click page "down" button
     Then I go back
     Then I open "random" article of that day
+    Then I click page "down" button
     Then I go back
     Examples:
       | day |

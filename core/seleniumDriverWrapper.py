@@ -143,6 +143,15 @@ class SeleniumDriverWrapper:
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
+    def isListElementClickable(self, myLocator=None, locatorType="xpath", position=None, element=None):
+        try:
+            if element == None:
+                byType = self.getByType(locatorType)
+                element = self.getElements(myLocator, byType).__getitem__(position)
+            return element.get_attribute("clickable")
+        except Exception as error:
+            self.logger.error(error)
+
     def getClassName(self, myLocator, locatorType):
         try:
             self.getElement(myLocator, locatorType).get_attribute("classname")
@@ -278,10 +287,32 @@ class SeleniumDriverWrapper:
         except Exception as error:
             self.logger.error(error)
 
+    def arrow_down_up(self, count, direction):
+        actions = ActionChains ( self.driver )
+        i = 0
+        try:
+            if direction.upper() == "DOWN":
+                while i < int(count):
+                    actions.send_keys ( Keys.ARROW_DOWN ).perform ()
+                    time.sleep ( 2 )
+                    i =i+1
+            elif direction.upper() == "UP":
+                while i < int ( count ):
+                    actions.send_keys ( Keys.ARROW_UP ).perform ()
+                    time.sleep ( 2 )
+                    i = i+1
+        except Exception as error:
+            self.logger.error(error)
+
     def goBack(self):
         try:
-            actions = ActionChains(self.driver)
-            actions.send_keys(Keys.ALT, Keys.LEFT).perform()
+            last_height = self.driver.execute_script ( "return document.body.scrollHeight" )
+            self.driver.execute_script ( "window.scrollTo(0, document.body.scrollHeight);" )
+            self.driver.execute_script ( "window.history.go(-1)" )
+
+            #actions = ActionChains(self.driver)
+            #actions.send_keys(Keys.ALT, Keys.LEFT).perform()
+            #actions.key_down(Keys.ALT).send_keys(Keys.LEFT).key_up(Keys.ALT).perform()
         except Exception as error:
             self.logger.error(error)
 

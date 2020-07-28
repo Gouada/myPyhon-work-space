@@ -1,8 +1,14 @@
-
+import logging
+from time import sleep
 
 from pages.basePage import BasePage
+from utils.logger import MyLogger
+
 
 class GuineenewsArchivesPage(BasePage):
+
+    mylg = MyLogger ()
+    logger = mylg.customLogger ( logging.DEBUG )
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -16,5 +22,13 @@ class GuineenewsArchivesPage(BasePage):
     def select_archives(self, day):
         day_index = (int(day)-1)
         element = self.getListElement(myLocator=self.calendar_day_having_archives,locatorType="xpath",elementPosition=day_index)
-        #self.scrollElementIntoView(element)
-        self.clickListElement(myLocator=self.calendar_day_having_archives,locatorType="xpath",elementPosition=day_index)
+        self.scrollElementIntoView(element)
+        #self.arrow_down_up ( 2, "up" )
+        if self.isListElementClickable(element=element):
+            self.clickListElement ( myLocator=self.calendar_day_having_archives, locatorType="xpath",
+                                    elementPosition=day_index )
+        else:
+            self.arrow_down_up ( 2, "up" )
+            self.clickListElement ( myLocator=self.calendar_day_having_archives, locatorType="xpath",
+                                    elementPosition=day_index )
+

@@ -1,10 +1,16 @@
+import logging
 import math
 import random
 from time import sleep
 
 from pages.basePage import BasePage
+from utils.logger import MyLogger
+
 
 class GuineenewsSearchPage(BasePage):
+
+    mylg = MyLogger ()
+    logger = mylg.customLogger ( logging.DEBUG )
 
     pages = "//span[contains(@class, 'pages') and contains(text(), 'Page') and contains(text(), 'sur') ]"
     next_page_icon = "//div['page-nav td-pb-padding-side']/child::a/i[@class='td-icon-menu-right']/parent::a"
@@ -36,7 +42,7 @@ class GuineenewsSearchPage(BasePage):
             random_index = random.randint(0, (len(elements)-1))
             element = self.getListElement(self.result_list, "xpath", random_index)
             self.scrollElementIntoView(element)
-            sleep(4)
+            sleep(1)
             self.clickElement(element=element)
 
     def click_a_specific_search_result(self, position):
@@ -44,10 +50,10 @@ class GuineenewsSearchPage(BasePage):
         elements = self.getElements(self.result_list, "xpath")
         if len(elements) > 0:
             if position == "last":
-                article_index = len(elements) -1
+                article_index = int(len(elements)) -1
             else:
-                article_index = position
+                article_index = int(position)
             element = self.getListElement(self.result_list, "xpath", article_index)
             self.scrollElementIntoView(element)
-            sleep(3)
+            sleep(1)
             self.clickElement(element=element)

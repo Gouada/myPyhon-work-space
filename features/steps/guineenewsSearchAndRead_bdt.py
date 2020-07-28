@@ -131,10 +131,11 @@ class SerachAndReadArticle():
         except Exception as error:
             context.logger.error ( error )
 
-    @then ( u'I go back' )
+    @then ( 'I go back' )
     def step_impl(context):
         try:
             context.searchPage.goBack ()
+            sleep(3)
         except Exception as error:
             context.logger.error ( error )
 
