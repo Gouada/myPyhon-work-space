@@ -10,7 +10,7 @@ from constants.browser import Browsers
 
 @fixture
 def setUpClass(context):
-    driver = MyDriverFactory.getDriverManager ( Browsers.firefox ).getDriver()
+    driver = MyDriverFactory.getDriverManager ( Browsers.chrome ).getDriver()
     context.driver = driver
     lg = MyLogger ()
     context.logger = lg.customLogger ( logging.DEBUG )

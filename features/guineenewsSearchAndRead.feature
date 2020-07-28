@@ -17,7 +17,6 @@ Feature: search and read an article
      |Politique |
      |Societe   |
 
-  @wip
   Scenario Outline: search article
       Then I scroll to "top"
       When I search "<word>"
@@ -39,7 +38,6 @@ Feature: search and read an article
           | Cellou Dalein  |
           | KPC            |
 
-  @wip
   Scenario Outline: les articles en vedette
        Then I scroll to "top"
        Then I go to sub category "<cat>"
