@@ -173,6 +173,7 @@ class GuineenewsMenu(BasePage):
     def select_from_derniers_drop_down_Menu(self, criteria):
 
         self.moveMouseOnElement(self.articles_filter, "xpath")
+        sleep(3)
         filter_elements = self.getElements(self.filter_lis, locatorType="xpath")
 
         if(criteria == Menu.Filter_cretaria_vedette):

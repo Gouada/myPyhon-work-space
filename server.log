@@ -1,0 +1,37 @@
+2020.07.28 12:31:41 - setUpClass ERROR Message: Element <li class="td-pulldown-filter-item"> could not be scrolled into view
+
+2020.07.28 12:31:41 - GuineenewsSearchPage ERROR Message: (758, 1565) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:32:05 - setUpClass ERROR Message: Element <li class="td-pulldown-filter-item"> could not be scrolled into view
+
+2020.07.28 12:32:05 - GuineenewsSearchPage ERROR Message: (741, 1290) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:32:26 - setUpClass ERROR Message: Element <li class="td-pulldown-filter-item"> could not be scrolled into view
+
+2020.07.28 12:32:26 - GuineenewsSearchPage ERROR Message: (381, 1127) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:32:48 - setUpClass ERROR 
+2020.07.28 12:32:48 - GuineenewsSearchPage ERROR Message: (458, -83) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:32:57 - GuineenewsSearchPage ERROR Message: (639, 1728) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:33:08 - GuineenewsSearchPage ERROR Message: (811, -1022) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:33:09 - setUpClass ERROR Message: The element reference of <a href="https://www.guineenews.org/peche-le-gouvernement-accorde-un-pret-de-4-milliards-gnf-a-des-groupements-feminins/"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
+2020.07.28 12:33:29 - setUpClass ERROR 
+2020.07.28 12:33:29 - GuineenewsSearchPage ERROR Message: (451, -83) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:33:38 - GuineenewsSearchPage ERROR Message: (653, 968) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:33:51 - GuineenewsSearchPage ERROR Message: (811, -990) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:33:52 - setUpClass ERROR Message: The element reference of <a href="https://www.guineenews.org/peche-le-gouvernement-accorde-un-pret-de-4-milliards-gnf-a-des-groupements-feminins/"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
+2020.07.28 12:34:12 - setUpClass ERROR 
+2020.07.28 12:34:12 - GuineenewsSearchPage ERROR Message: (365, -83) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:34:34 - GuineenewsSearchPage ERROR Message: (811, -990) is out of bounds of viewport width (1536) and height (750)
+
+2020.07.28 12:34:35 - setUpClass ERROR Message: The element reference of <a href="https://www.guineenews.org/peche-le-gouvernement-accorde-un-pret-de-4-milliards-gnf-a-des-groupements-feminins/"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
