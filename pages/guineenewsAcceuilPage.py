@@ -51,9 +51,10 @@ class GuineenewsAcceuil(BasePage):
         myLocator = self.get_rubrique_elements_xpath_locaor(rubrique)
         elements = self.getElements(myLocator=myLocator, locatorType="xpath")
         if element_index_str == "random":
-            element_index = random.randint(0, len(elements))
+            element_index = random.randint(0, int(len(elements) -1))
         elif element_index_str == "last":
             element_index = int(len(elements) -1)
         else:
             element_index = int(element_index_str)
+        #self.arrow_down_up(1,"UP")
         self.clickListElement(elements=elements,elementPosition=int(element_index))

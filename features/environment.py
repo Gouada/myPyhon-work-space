@@ -1,12 +1,13 @@
 import logging
-from time import sleep
 
 from behave import fixture, use_fixture
-#import unittest
 
+from constants.browser import Browsers
 from core.driverFactory import MyDriverFactory
 from utils.logger import MyLogger
-from constants.browser import Browsers
+
+
+# import unittest
 
 @fixture
 def setUpClass(context):
