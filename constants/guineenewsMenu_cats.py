@@ -4,25 +4,25 @@ class Menu():
 
     Acceuil = 'Acceuil'
     News = 'News'
-    Grands_Dossiers='Grands_Dossiers'
+    Grands_Dossiers='Grands Dossiers'
     Interviews = 'Interviews'
     Publireportage = 'Publireportage'
-    Region = 'Region'
+    Region = 'Région'
     Sport = 'Sport'
-    Le_Monde = 'Le_Monde'
+    Le_Monde = 'Le monde'
 
     Tous = 'Tous'
     Politique = 'Politique'
     Economie = 'Economie'
-    Faits_Divers = 'Faits_Divers'
-    Art_et_Culture = 'Art_et_Culture'
-    Revue_de_presse = 'Revue_de_presse'
-    Societe = 'Societe'
+    Faits_Divers = 'Faits Divers'
+    Art_et_Culture = 'Art & Culture'
+    Revue_de_presse = 'Revue de presse'
+    Societe = 'Société'
 
-    Basse_Guinnee = 'Basse_Guinnee'
-    Haute_Guinnee = 'Haute_Guinnee'
-    Guinnee_Forestiere = 'Guinnee_Forestiere'
-    Moyenne_Guinnee = 'Moyenne_Guinnee'
+    Basse_Guinnee = 'Basse Guinée'
+    Haute_Guinnee = 'Haute Guinée'
+    Guinnee_Forestiere = 'Guinée Forestière'
+    Moyenne_Guinnee = 'Moyenne Guinée'
 
     Filter_cretaria_Dernier = "Dernier"
     Filter_cretaria_vedette = "Les articles en vedettes"

@@ -49,19 +49,19 @@ class GuineenewsStratPage(unittest.TestCase):
 
     @when ('I click on politique')
     def step_impl(context):
-        try:
-            context.menuPage.go_to_news_sub_rubrique(Menu.Politique)
+        #try:
+            context.menuPage.go_to_sub_menu( Menu.News, Menu.Politique )
             sleep ( 5 )
-        except Exception as error:
-            fail ( 'Step fail with {}'.format ( str ( error ) ) )
-            context.logger.error ( error )
-            context.startPage.takescreenShotOnError("i_click_on_politique")
+        # except Exception as error:
+        #     fail ( 'Step fail with {}'.format ( str ( error ) ) )
+        #     context.logger.error ( error )
+        #     context.startPage.takescreenShotOnError("i_click_on_politique")
 
-    @then('I click on societe')
+    @then('I click on Societe')
     def step_impl(context):
         try:
             #sleep ( 3 )
-            context.menuPage.go_to_news_sub_rubrique ( Menu.Societe )
+            context.menuPage.go_to_sub_menu (Menu.News, Menu.Societe )
             sleep ( 3 )
         except Exception as error:
             fail('Step fail with {}'.format(str(error)) )

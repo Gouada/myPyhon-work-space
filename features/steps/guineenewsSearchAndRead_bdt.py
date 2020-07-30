@@ -20,7 +20,7 @@ class SerachAndReadArticle():
     def step_impl(context):
         try:
             context.driver.get(Urls.startPage_guineenews)
-            context.menu = GuineenewsMenu ( context.driver )
+            context.menuPage = GuineenewsMenu ( context.driver )
             context.searchPage = GuineenewsSearchPage ( context.driver )
             sleep(2)
         except Exception as error:
@@ -30,7 +30,7 @@ class SerachAndReadArticle():
     @when('I search "{word}"')
     def step_impl(context, word):
         try:
-            context.menu.search(word)
+            context.menuPage.search( word )
             sleep ( 3 )
             noResults = "Aucun résultat pour votre recherche"
             assert not context.searchPage.is_text_present(noResults)
@@ -85,7 +85,7 @@ class SerachAndReadArticle():
     @then ( 'I go to start page' )
     def step_impl(context):
         try:
-            context.menu.click_logo()
+            context.menuPage.click_logo()
         except Exception as error:
             context.logger.error(error)
 
@@ -93,22 +93,22 @@ class SerachAndReadArticle():
     def step_impl(context, cat):
         try:
             if cat == "Economy":
-                context.menu.go_to_news_sub_rubrique ( Menu.Economie )
+                context.menuPage.go_to_sub_menu ( Menu.Economie )
             if cat == "Politique":
-                context.menu.go_to_news_sub_rubrique ( Menu.Politique )
+                context.menuPage.go_to_sub_menu ( Menu.Politique )
             if cat == "Societe":
-                context.menu.go_to_news_sub_rubrique ( Menu.Societe )
+                context.menuPage.go_to_sub_menu ( Menu.Societe )
 
             sleep ( 3 )
         except Exception as error:
             fail ( 'Step fail with {}'.format ( str ( error ) ) )
             context.logger.error ( error )
-            context.menu.takescreenShotOnError ( "I_go_to_sub_category_economy" )\
+            context.menuPage.takescreenShotOnError ( "I_go_to_sub_category_economy" )\
 
     @then ( 'I select les plus populaires' )
     def step_impl(context):
         try:
-            context.menu.select_from_derniers_drop_down_Menu ( Menu.Filter_cretaria_plus_populaire )
+            context.menuPage.select_from_derniers_drop_down_Menu ( Menu.Filter_cretaria_plus_populaire )
             sleep ( 3 )
         except Exception as error:
             context.logger.error ( error )
@@ -124,9 +124,9 @@ class SerachAndReadArticle():
     def step_impl(context, direction):
         try:
             if direction.upper() == "BOTTOM":
-                context.menu.scrollDownToBottom ()
+                context.menuPage.scrollDownToBottom ()
             elif direction.upper() == "TOP":
-                context.menu.scrollUpToTop()
+                context.menuPage.scrollUpToTop()
             sleep ( 1 )
         except Exception as error:
             context.logger.error ( error )
@@ -142,7 +142,7 @@ class SerachAndReadArticle():
     @then ( 'I select les articles en vedette' )
     def step_impl(context):
         try:
-            context.menu.select_from_derniers_drop_down_Menu ( Menu.Filter_cretaria_vedette )
+            context.menuPage.select_from_derniers_drop_down_Menu ( Menu.Filter_cretaria_vedette )
             sleep ( 3 )
         except Exception as error:
             context.logger.error ( error )
@@ -151,9 +151,9 @@ class SerachAndReadArticle():
     def step_impl(context, direction):
         try:
             if direction.upper() == "DOWN":
-                context.menu.pageDown()
+                context.menuPage.pageDown()
             elif direction.upper == "UP":
-                context.menu.pageUp()
+                context.menuPage.pageUp()
             sleep(5)
         except Exception as error:
             context.logger.error(error)

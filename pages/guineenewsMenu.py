@@ -13,27 +13,28 @@ class GuineenewsMenu(BasePage):
 
     logo = "//div[@class='td-main-menu-logo td-logo-in-header td-logo-sticky']/a[@class='td-main-logo']"
 
-    menu_acceuil = "//ul[@id='menu-mainmenu-1']/li[1]/a"
-    menu_news = "//ul[@id='menu-mainmenu-1']/li[2]/a"
-    menu_grands_dossiers = "//ul[@id='menu-mainmenu-1']/li[3]/a"
-    menu_interviews      = "//ul[@id='menu-mainmenu-1']/li[4]/a"
-    menu_publireportage = "//ul[@id='menu-mainmenu-1']/li[5]/a"
-    menu_region = "//ul[@id='menu-mainmenu-1']/li[6]/a"
-    menu_sport = "//ul[@id='menu-mainmenu-1']/li[7]/a"
-    menu_le_monde = "//ul[@id='menu-mainmenu-1']/li[8]/a"
 
-    sub_menus_news = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a"
-    sub_menus_grandossiers  = "//ul[@id='menu-mainmenu-1']/li[3]/ul//child::h3[@class='entry-title td-module-title']/a"
-    sub_menus_publireportage = "//ul[@id='menu-mainmenu-1']/li[5]/ul//child::h3[@class='entry-title td-module-title']/a"
-    sub_menus_region         = "//ul[@id='menu-mainmenu-1']/li[6]/ul//child::div[@class='block-mega-child-cats']/a"
+    # menu_acceuil                = "//ul[@id='menu-mainmenu-1']/li[1]/a"
+    # menu_news                   = "//ul[@id='menu-mainmenu-1']/li[2]/a"
+    # menu_grands_dossiers        = "//ul[@id='menu-mainmenu-1']/li[3]/a"
+    # menu_interviews             = "//ul[@id='menu-mainmenu-1']/li[4]/a"
+    # menu_publireportage         = "//ul[@id='menu-mainmenu-1']/li[5]/a"
+    # menu_region                 = "//ul[@id='menu-mainmenu-1']/li[6]/a"
+    # menu_sport                  = "//ul[@id='menu-mainmenu-1']/li[7]/a"
+    # menu_le_monde               = "//ul[@id='menu-mainmenu-1']/li[8]/a"
 
-    sub_menu_tous = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[1]"
-    sub_menu_art_et_culture = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[2]"
-    sub_menu_faits_divers = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[4]"
-    sub_menu_economie = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[3]"
-    sub_menu_politique ="//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]"
-    sub_menu_revue_de_presse = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"
-    sub_menu_societe = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"
+    sub_menus_news              = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a"
+    sub_menus_grandossiers      = "//ul[@id='menu-mainmenu-1']/li[3]/ul//child::h3[@class='entry-title td-module-title']/a"
+    sub_menus_publireportage    = "//ul[@id='menu-mainmenu-1']/li[5]/ul//child::h3[@class='entry-title td-module-title']/a"
+    sub_menus_region            = "//ul[@id='menu-mainmenu-1']/li[6]/ul//child::div[@class='block-mega-child-cats']/a"
+
+    # sub_menu_tous               = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[1]"
+    # sub_menu_art_et_culture     = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[2]"
+    # sub_menu_faits_divers       = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[4]"
+    # sub_menu_economie           = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[3]"
+    # sub_menu_politique          = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[5]"
+    # sub_menu_revue_de_presse    = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[6]"
+    # sub_menu_societe            = "//ul[@id='menu-mainmenu-1']/li[2]/ul//child::div[@class='block-mega-child-cats']/a[7]"
 
     search_icon = 'td-header-search-button' #"//a[@id='td-header-search-button']"
     search_field = 'td-header-search' #"//input[@id='td-header-search']"
@@ -49,119 +50,146 @@ class GuineenewsMenu(BasePage):
         super().__init__(driver)
         self.driver = driver
 
+    def get_Menu_xpath_locator(self, menu):
+        return "//ul[@id='menu-mainmenu-1']//child::a[contains(text(), '{}')]".format ( str ( menu ) )
+
+    def get_sub_Menu_xpath_locator(self, menu, sub_menu):
+        return "//ul[@id='menu-mainmenu-1']//child::a[contains(text(), '{}')]//following-sibling::ul//" \
+               "child::div[@class='block-mega-child-cats']/a[contains(text(), '{}')]".format(menu, sub_menu)
+
     def go_to_rubrique(self, rubrique, locatorType="xpath"):
-        if rubrique == Menu.Acceuil:
-            self.clickElement ( self.menu_acceuil, "xpath" )
-            # self.waitForElementToBe(self.menu, "id")
 
-        if rubrique == Menu.News:
-            self.clickElement ( self.menu_news, "xpath" )
+        myLocator = self.get_Menu_xpath_locator(rubrique)
+        self.clickElement(myLocator, "xpath")
+        # if rubrique == Menu.Acceuil:
+        #     self.clickElement ( self.menu_acceuil, "xpath" )
+        #     # self.waitForElementToBe(self.menu, "id")
+        #
+        # if rubrique == Menu.News:
+        #     self.clickElement ( self.menu_news, "xpath" )
+        #
+        # if rubrique == Menu.Grands_Dossiers:
+        #     self.clickElement ( self.menu_grands_dossiers, "xpath" )
+        #
+        # if rubrique == Menu.Interviews:
+        #     self.clickElement ( self.menu_interviews, "xpath" )
+        #
+        # if rubrique == Menu.Publireportage:
+        #     self.clickElement ( self.menu_publireportage, "xpath" )
+        #
+        # if rubrique == Menu.Region:
+        #     self.clickElement ( self.menu_region, "xpath" )
+        #
+        # if rubrique == Menu.Sport:
+        #     self.clickElement ( self.menu_sport, "xpath" )
+        #
+        # if rubrique == Menu.Le_Monde:
+        #     self.clickElement ( self.menu_le_monde, "xpath" )
 
-        if rubrique == Menu.Grands_Dossiers:
-            self.clickElement ( self.menu_grands_dossiers, "xpath" )
+    def move_mouse_on_main_menu_element(self, menu, locatorType="xpath"):
 
-        if rubrique == Menu.Interviews:
-            self.clickElement ( self.menu_interviews, "xpath" )
+        myLocator = self.get_Menu_xpath_locator ( menu )
+        #self.logger.warning(myLocator)
+        self.moveMouseOnElement ( myLocator, locatorType )
 
-        if rubrique == Menu.Publireportage:
-            self.clickElement ( self.menu_publireportage, "xpath" )
-
-        if rubrique == Menu.Region:
-            self.clickElement ( self.menu_region, "xpath" )
-
-        if rubrique == Menu.Sport:
-            self.clickElement ( self.menu_sport, "xpath" )
-
-        if rubrique == Menu.Le_Monde:
-            self.clickElement ( self.menu_le_monde, "xpath" )
-
-    def move_mouse_on_main_menu_element(self, menu_locator, locatorType="xpath"):
-
-        if menu_locator == Menu.News:
-            self.moveMouseOnElement(self.menu_news,locatorType)
-
-        if menu_locator == Menu.Grands_Dossiers:
-            self.moveMouseOnElement(self.menu_grands_dossiers,locatorType)
-
-        if menu_locator == Menu.Publireportage:
-            self.moveMouseOnElement(self.menu_publireportage,locatorType)
-
-        if menu_locator == Menu.Region:
-            self.moveMouseOnElement(self.menu_region,locatorType)
+        # if menu_locator == Menu.News:
+        #     self.moveMouseOnElement(self.menu_news,locatorType)
+        #
+        # if menu_locator == Menu.Grands_Dossiers:
+        #     self.moveMouseOnElement(self.menu_grands_dossiers,locatorType)
+        #
+        # if menu_locator == Menu.Publireportage:
+        #     self.moveMouseOnElement(self.menu_publireportage,locatorType)
+        #
+        # if menu_locator == Menu.Region:
+        #     self.moveMouseOnElement(self.menu_region,locatorType)
         #sleep(2)
 
-    def go_to_news_sub_rubrique(self, sub_rubrique, locatorType="xpath"):
+    def go_to_sub_menu(self, menu, sub_menu, locatorType="xpath"):
 
-        self.move_mouse_on ( Menu.News, locatorType )
+        self.move_mouse_on (menu, locatorType )
+        #if menu == Menu.Region:
+         #   self.move_mouse_on ( Menu.Region, locatorType )
         sleep(1)
-        if sub_rubrique == Menu.Tous:
-            element = self.waitForElementToBe(self.sub_menu_tous)
-            self.clickElement(element=element)
-            # self.waitForElementToBe(self.menu, "id")
+        myLocator = self.get_sub_Menu_xpath_locator (Menu.News, sub_menu )
+        #self.logger.info(myLocator)
+        element = self.waitForElementToBe ( myLocator )
+        self.clickElement ( element=element )
 
-        if sub_rubrique == Menu.Art_et_Culture:
-            element = self.waitForElementToBe (self.sub_menu_art_et_culture)
-            self.clickElement(element=element)
-
-        if sub_rubrique == Menu.Economie:
-            element = self.waitForElementToBe (self.sub_menu_economie, locatorType=locatorType, event="visible")
-            self.clickElement ( element=element )
-            #self.clickElement ( self.sub_menu_economie, locatorType )
-
-        if sub_rubrique == Menu.Faits_Divers:
-            element = self.waitForElementToBe (self.sub_menu_faits_divers)
-            self.clickElement (element=element)
-
-        if sub_rubrique == Menu.Politique:
-            element = self.waitForElementToBe ( self.sub_menu_politique )
-            self.clickElement ( element=element )
-
-        if sub_rubrique == Menu.Societe:
-            element = self.waitForElementToBe ( self.sub_menu_societe )
-            self.clickElement ( element=element )
-            #self.clickElement ( self.sub_menu_societe )
-
-        if sub_rubrique == Menu.Revue_de_presse:
-            element = self.waitForElementToBe ( self.sub_menu_revue_de_presse )
-            self.clickElement ( element=element )
+        # if sub_menu == Menu.Tous:
+        #     element = self.waitForElementToBe(self.sub_menu_tous)
+        #     self.clickElement(element=element)
+        #     # self.waitForElementToBe(self.menu, "id")
+        #
+        # if sub_menu == Menu.Art_et_Culture:
+        #     element = self.waitForElementToBe (self.sub_menu_art_et_culture)
+        #     self.clickElement(element=element)
+        #
+        # if sub_menu == Menu.Economie:
+        #     element = self.waitForElementToBe (self.sub_menu_economie, locatorType=locatorType, event="visible")
+        #     self.clickElement ( element=element )
+        #     #self.clickElement ( self.sub_menu_economie, locatorType )
+        #
+        # if sub_menu == Menu.Faits_Divers:
+        #     element = self.waitForElementToBe (self.sub_menu_faits_divers)
+        #     self.clickElement (element=element)
+        #
+        # if sub_menu == Menu.Politique:
+        #     element = self.waitForElementToBe ( self.sub_menu_politique )
+        #     self.clickElement ( element=element )
+        #
+        # if sub_menu == Menu.Societe:
+        #     element = self.waitForElementToBe ( self.sub_menu_societe )
+        #     self.clickElement ( element=element )
+        #     #self.clickElement ( self.sub_menu_societe )
+        #
+        # if sub_menu == Menu.Revue_de_presse:
+        #     element = self.waitForElementToBe ( self.sub_menu_revue_de_presse )
+        #     self.clickElement ( element=element )
 
         #if sub_rubrique == "Le_monde":
          #   self.clickElement ( self.menu_le_monde, "xpath" )
 
     def click_random_sub_article_in(self, menu, locatorType="xpath"):
+        #try:
+            if menu == Menu.Region:
+                sub_menus = self.sub_menus_region
+                #main_menu = self.menu_region
+            if menu == Menu.Publireportage:
+                sub_menus = self.sub_menus_publireportage
+                #main_menu = self.menu_publireportage
+            if menu == Menu.Grands_Dossiers:
+                #self.logger.warning(self.sub_menus_grandossiers)
+                sub_menus = self.sub_menus_grandossiers
+                #main_menu = self.menu_grands_dossiers
 
-        if menu == Menu.Region:
-            sub_menus = self.sub_menus_region
-            main_menu = self.menu_region
-        if menu == Menu.Publireportage:
-            sub_menus = self.sub_menus_publireportage
-            main_menu = self.menu_publireportage
-        if menu == Menu.Grands_Dossiers:
-            #self.logger.warning(self.sub_menus_grandossiers)
-            sub_menus = self.sub_menus_grandossiers
-            main_menu = self.menu_grands_dossiers
+            self.move_mouse_on_main_menu_element (menu)
+            #sleep(2)
+            #if menu == "menu_grands_dossiers":
+            articles = self.getElements(sub_menus, "xpath")
+            if len(articles) > 0:
+                random_index = random.randint(1, (len(articles)-1))
+                #self.logger.warning(str(len(articles)))
+                self.clickListElement(myLocator=sub_menus,locatorType=locatorType,elementPosition=random_index)
+        # except Exception as error:
+        #     self.logger.error(error)
 
-        self.move_mouse_on_main_menu_element (menu)
-        #sleep(2)
-        #if menu == "menu_grands_dossiers":
-        articles = self.getElements(sub_menus, "xpath")
-        if len(articles) > 0:
-            random_index = random.randint(1, (len(articles)-1))
-            #self.logger.warning(str(len(articles)))
-            self.clickListElement(myLocator=sub_menus,locatorType=locatorType,elementPosition=random_index)
+    def move_mouse_on(self, menu_titel, locatorType="xpath"):
 
-    def move_mouse_on(self, menu_locator, locatorType="xpath"):
-        if menu_locator == Menu.News:
-            self.moveMouseOnElement(self.menu_news,locatorType)
+        myLocator = self.get_Menu_xpath_locator(menu_titel)
+        self.moveMouseOnElement(myLocator, locatorType)
 
-        if menu_locator == Menu.Politique:
-            self.moveMouseOnElement(self.sub_menu_politique,locatorType)
-
-        if menu_locator == Menu.Revue_de_presse:
-            self.moveMouseOnElement(self.sub_menu_revue_de_presse,locatorType)
-
-        if menu_locator == Menu.Societe:
-            self.moveMouseOnElement(self.sub_menu_societe,locatorType)
+        # if menu_locator == Menu.News:
+        #     self.moveMouseOnElement(self.menu_news,locatorType)
+        #
+        # if menu_locator == Menu.Politique:
+        #     self.moveMouseOnElement(self.sub_menu_politique,locatorType)
+        #
+        # if menu_locator == Menu.Revue_de_presse:
+        #     self.moveMouseOnElement(self.sub_menu_revue_de_presse,locatorType)
+        #
+        # if menu_locator == Menu.Societe:
+        #     self.moveMouseOnElement(self.sub_menu_societe,locatorType)
 
     def search(self, txt):
         self.clickElement(self.search_icon)
