@@ -22,8 +22,8 @@ class GuineenewsArchivesPage(BasePage):
     def select_archives(self, day):
         day_index = (int(day)-1)
         element = self.getListElement(myLocator=self.calendar_day_having_archives,locatorType="xpath",elementPosition=day_index)
-        self.scrollElementIntoView(element)
-        #self.arrow_down_up ( 2, "up" )
+        #self.scrollElementIntoView(element)
+        self.arrow_down_up ( 2, "up" )
         if self.isListElementClickable(element=element):
             self.clickListElement ( myLocator=self.calendar_day_having_archives, locatorType="xpath",
                                     elementPosition=day_index )

@@ -92,12 +92,12 @@ class SerachAndReadArticle():
     @then ( 'I go to sub category "{cat}"' )
     def step_impl(context, cat):
         try:
-            if cat == "Economy":
-                context.menuPage.go_to_sub_menu ( Menu.Economie )
+            if cat == "Economie":
+                context.menuPage.go_to_sub_menu ( Menu.News, Menu.Economie )
             if cat == "Politique":
-                context.menuPage.go_to_sub_menu ( Menu.Politique )
-            if cat == "Societe":
-                context.menuPage.go_to_sub_menu ( Menu.Societe )
+                context.menuPage.go_to_sub_menu ( Menu.News, Menu.Politique )
+            if cat == "Société":
+                context.menuPage.go_to_sub_menu ( Menu.News, Menu.Societe )
 
             sleep ( 3 )
         except Exception as error:

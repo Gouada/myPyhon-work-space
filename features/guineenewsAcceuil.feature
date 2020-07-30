@@ -18,8 +18,7 @@ Feature: Acceuil
     #Then I click page "down" button
     Then I go back
     Examples:
-      | rubrique            |
-      | POLITIQUE           |
-      | SPORT               |
-      | DERNIERES NOUVELLES |
-      | ECONOMIE            |
+      | rubrique   |
+      | ECONOMIE   |
+      | SPORT      |
+      | POLITIQUE  |

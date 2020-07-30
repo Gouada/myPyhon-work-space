@@ -1,19 +1,9 @@
-2020.07.30 19:48:28 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/sports-le-ministre-detat-bantama-sow-inaugure-le-siege-du-fades/" rel="bookmark" title="Sports : le ministre d’Etat Bantama Sow inaugure le siège du FADES">...</a> is not clickable at point (419, 35). Other element would receive the click: <a href="https://www.guineenews.org">...</a>
+2020.07.30 21:08:06 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 85). Other element would receive the click: <div class="td-mega-row">...</div>
   (Session info: chrome=84.0.4147.89)
 
-2020.07.30 19:48:31 - setUpClass ERROR empty range for randrange() (0,0, 0)
-2020.07.30 19:53:03 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/cellou-dalein-il-y-a-une-crise-le-pays-brule-mais-alpha-sen-fout/" rel="bookmark" title="Cellou Dalein : « il y a une crise, le pays brûle, mais Alpha s’en fout&nbsp;»">...</a> is not clickable at point (642, 100). Other element would receive the click: <div class="td-header-menu-wrap td-header-gradient td-affix">...</div>
+2020.07.30 21:13:14 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 125). Other element would receive the click: <div class="td-mega-row">...</div>
   (Session info: chrome=84.0.4147.89)
 
-2020.07.30 19:56:05 - GuineenewsStartPage INFO StartPage successfully created
-2020.07.30 19:56:15 - setUpClass ERROR 'Context' object has no attribute 'menu'
-2020.07.30 19:56:19 - setUpClass ERROR 'Context' object has no attribute 'menu'
-2020.07.30 19:56:19 - setUpClass ERROR 'Context' object has no attribute 'menu'
-2020.07.30 19:56:26 - setUpClass ERROR 'Context' object has no attribute 'menu'
-2020.07.30 19:56:37 - setUpClass ERROR 'Context' object has no attribute 'menu'
-2020.07.30 19:56:46 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 85). Other element would receive the click: <div class="td-mega-row">...</div>
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.30 19:59:05 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/presidentielle-2020-en-guinee-cellou-dalein-evalue-ses-chances/" rel="bookmark" title="...">Présidentielle 2020 en Guinée&nbsp;: Cellou Dalein évalue ses chances</a> is not clickable at point (368, 44). Other element would receive the click: <img src="https://www.guineenews.org/wp-content/uploads/2018/03/LogoGuineenews-1.png" alt="Guinéenews">
+2020.07.30 21:14:46 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/culture-des-artistes-guineens-presentent-deux-oeuvres-en-hommage-a-feu-mory-kante/" rel="bookmark" title="Culture : Des artistes guinéens présentent deux œuvres en hommage à feu Mory Kanté">...</a> is not clickable at point (366, 45). Other element would receive the click: <img src="https://www.guineenews.org/wp-content/uploads/2018/03/LogoGuineenews-1.png" alt="Guinéenews">
   (Session info: chrome=84.0.4147.89)
 

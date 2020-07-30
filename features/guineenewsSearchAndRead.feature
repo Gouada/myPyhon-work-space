@@ -3,7 +3,7 @@ Feature: search and read an article
   Background:
      Given I start guineenews
 
- @wip
+ @read
   Scenario Outline: les articles populaire
        Then I scroll to "top"
        Then I go to sub category "<cat>"
@@ -13,10 +13,11 @@ Feature: search and read an article
        Then I go back
    Examples:
      |cat       |
-     |Economy   |
+     |Economie  |
      |Politique |
-     |Societe   |
+     |Société   |
 
+  @read
   Scenario Outline: search article
       Then I scroll to "top"
       When I search "<word>"
@@ -37,7 +38,7 @@ Feature: search and read an article
           | Alpha Conde   |
           | Cellou Dalein  |
           | KPC            |
-
+  @read
   Scenario Outline: les articles en vedette
        Then I scroll to "top"
        Then I go to sub category "<cat>"
@@ -47,6 +48,6 @@ Feature: search and read an article
        Then I go back
    Examples:
      |cat       |
-     |Economy   |
+     |Economie  |
      |Politique |
-     |Societe   |
+     |Société   |

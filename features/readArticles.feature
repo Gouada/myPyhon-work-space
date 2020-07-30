@@ -19,9 +19,9 @@ Feature:  read articles
     Examples:
       | day |
       | 1   |
-      | 10   |
-      | 15   |
-  @prmth
+      | 10  |
+      | 15  |
+  @test
   Scenario: read previous month archive
     When I go to "previous" month
     Then I paginate to "last" page
