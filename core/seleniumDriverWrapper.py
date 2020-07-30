@@ -5,7 +5,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
+
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 #from selenium.webdriver.common.actions import *obj9ob9
@@ -26,7 +28,7 @@ class SeleniumDriverWrapper:
 
 
     def getByType(self, locatorType):
-        #webdriver.Chrome.fo
+        #webdriver.Chrome.
         wb=None
         try:
             if locatorType.upper() == "ID":
@@ -54,7 +56,6 @@ class SeleniumDriverWrapper:
         try:
             byType = self.getByType(locatorType)
             #self.logger.info(byType)
-            #self.logger.info(".....myLocator.................................................."+myLocator)
             el = self.driver.find_element(byType, myLocator)
             return el
         except (Exception, NoSuchElementException) as error:
@@ -73,7 +74,7 @@ class SeleniumDriverWrapper:
 
     def clickElement(self, myLocator="None", locatorType="id", element=None):
         try:
-            if element == None:
+            if element is None:
                 element = self.getElement(myLocator, locatorType)
             element.click()
         except ElementNotVisibleException as error:
@@ -82,7 +83,6 @@ class SeleniumDriverWrapper:
     def typeTextInField(self, myLocator='', locatorType="id",text='', element=None):
         try:
             if element is None:
-                #self.logger.warning("Elment is None ........................**********")
                 element = self.getElement(myLocator, locatorType)
             element.send_keys(text)
         except ElementNotVisibleException as error:
@@ -97,27 +97,32 @@ class SeleniumDriverWrapper:
             self.logger.error(error)
 
     def getElementText(self, myLocator, locatorType):
-        self.getElement(myLocator, locatorType).text
-
+        try:
+            return self.getElement(myLocator, locatorType).text
+        except ElementNotVisibleException as error:
+            self.logger.error(error)
 
     def getTagName(self, myLocator, locatorType):
-        self.getElement(myLocator, locatorType).tag_name
+        try:
+            return self.getElement(myLocator, locatorType).tag_name
+        except ElementNotVisibleException as error:
+            self.logger.error(error)
 
     def isEnabled(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).is_enabled()
+            return self.getElement(myLocator, locatorType).is_enabled()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def isVisible(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).is_displayed()
+            return self.getElement(myLocator, locatorType).is_displayed()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def isSelected(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).is_selected()
+            return self.getElement(myLocator, locatorType).is_selected()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
@@ -126,26 +131,53 @@ class SeleniumDriverWrapper:
 
     def isChecked(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).get_attribute("checked")
+            return self.getElement(myLocator, locatorType).get_attribute("checked")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def isFocused(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).get_attribute("focused")
+            return self.getElement(myLocator, locatorType).get_attribute("focused")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def isClickable(self, myLocator, locatorType):
         try:
             byType = self.getByType(locatorType)
-            self.getElement(myLocator, byType).get_attribute("clickable")
+            return self.getElement(myLocator, byType).get_attribute("clickable")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
+    def selectElementDropDownElement(self, myLocator=None, locatorType="xpath", value=None, index=None, text=None, criteria="value", element=None):
+        try:
+            if element is None:
+                element = self.getElement(myLocator,locatorType)
+            if criteria == "value":
+                return Select(element).select_by_value(value)
+            if criteria == "index":
+                return Select ( element ).select_by_index(index)
+            if criteria == "text":
+                return Select ( element ).select_by_visible_text(text)
+        except Exception as error:
+            self.logger.error(error)
+
+    def deselectDropDownElement(self, myLocator=None, locatorType="xpath", value=None, index=None, text=None,
+                             criteria="value", element=None):
+        try:
+            if element is None:
+                element = self.getElement ( myLocator, locatorType )
+            if criteria == "value":
+                return Select ( element ).select_by_value ( value )
+            if criteria == "index":
+                return Select ( element ).select_by_index ( index )
+            if criteria == "text":
+                return Select ( element ).select_by_visible_text ( text )
+        except Exception as error:
+            self.logger.error ( error )
+
     def isListElementClickable(self, myLocator=None, locatorType="xpath", position=None, element=None):
         try:
-            if element == None:
+            if element is None:
                 byType = self.getByType(locatorType)
                 element = self.getElements(myLocator, byType).__getitem__(position)
             return element.get_attribute("clickable")
@@ -154,31 +186,34 @@ class SeleniumDriverWrapper:
 
     def getClassName(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).get_attribute("classname")
+            return self.getElement(myLocator, locatorType).get_attribute("classname")
             #webdriver.Chrome.find_elements(By.id, myLocator).__getitem__().__len__()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def getContentDescription(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).get_attribute("content-Desc")
+            return self.getElement(myLocator, locatorType).get_attribute("content-Desc")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def getName(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).get_attribute("name")
+            return self.getElement(myLocator, locatorType).get_attribute("name")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def getLocation(self, myLocator, locatorType):
         try:
-            self.getElement(myLocator, locatorType).location
+            return self.getElement(myLocator, locatorType).location
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def is_text_present(self, text):
-        return str ( text ) in self.driver.page_source
+        try:
+            return str ( text ) in self.driver.page_source
+        except ElementNotVisibleException as error:
+            self.logger.error(error)
 
     def clickListElement(self, myLocator=None, locatorType="xpath", elementPosition=0, element=None, elements=None):
         try:
@@ -217,9 +252,7 @@ class SeleniumDriverWrapper:
             if event == 'visible':
                 element = wt.until(EC.presence_of_element_located((byType, myLocator)))
             if event == "clickable":
-                #self.logger.warning(".........................."+myLocator+"......."+ str(byType))
                 element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
-                #self.logger.warning ( "222.........................." + myLocator )
             else:
                 element = wt.until(EC.element_to_be_clickable((byType, myLocator)))
             return element
@@ -259,7 +292,6 @@ class SeleniumDriverWrapper:
             actions.move_to_element(element).perform()
         except Exception as error:
             self.logger.error(error)
-
 
     def scrollDownToElement(self, element):
         try:
