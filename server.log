@@ -1,9 +1,0 @@
-2020.07.30 21:08:06 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 85). Other element would receive the click: <div class="td-mega-row">...</div>
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.30 21:13:14 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/2020/07/0.../" aria-label="Publications publiées sur 1 July 2020">1</a> is not clickable at point (1091, 125). Other element would receive the click: <div class="td-mega-row">...</div>
-  (Session info: chrome=84.0.4147.89)
-
-2020.07.30 21:14:46 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/culture-des-artistes-guineens-presentent-deux-oeuvres-en-hommage-a-feu-mory-kante/" rel="bookmark" title="Culture : Des artistes guinéens présentent deux œuvres en hommage à feu Mory Kanté">...</a> is not clickable at point (366, 45). Other element would receive the click: <img src="https://www.guineenews.org/wp-content/uploads/2018/03/LogoGuineenews-1.png" alt="Guinéenews">
-  (Session info: chrome=84.0.4147.89)
-

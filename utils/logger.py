@@ -17,6 +17,7 @@ class MyLogger():
 
     def customLogger(self, logLevel):
         sourcename = inspect.stack()[1][3]
+        #logger = logging.getLogger(sourcename)
         logger = logging.getLogger(sourcename)
         logger.setLevel(logging.DEBUG)
 

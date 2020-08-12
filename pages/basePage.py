@@ -7,12 +7,14 @@ from selenium.common.exceptions import *
 
 class BasePage(SeleniumDriverWrapper):
 
+    rubrik = "//h1[@class='entry-title td-page-title']"
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
     def getPageTitle(self):
-        return self.driver.title
+        return self.getPageTitle()
 
     def waitPageToLoad(self, page):
 
@@ -20,3 +22,7 @@ class BasePage(SeleniumDriverWrapper):
                                                                                            ElementNotSelectableException,
                                                                                            NoSuchElementException])
         elt = wait.until(e_c.title_is(page.title))
+
+    def rubrikTitle(self):
+        return self.getElementText(self.rubrik, "xpath")
+        #self.getPageTitle()

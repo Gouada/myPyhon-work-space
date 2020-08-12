@@ -102,6 +102,18 @@ class SeleniumDriverWrapper:
         except ElementNotVisibleException as error:
             self.logger.error(error)
 
+    def getPageTitle(self):
+        try:
+            return self.driver.title
+        except Exception as error:
+            self.logger.error(error)
+
+    def getCurrentUrl(self):
+        try:
+            return  self.driver.current_url
+        except Exception as e:
+            self.logger.error(e.__str__())
+
     def getTagName(self, myLocator, locatorType):
         try:
             return self.getElement(myLocator, locatorType).tag_name

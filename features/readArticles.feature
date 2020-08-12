@@ -20,7 +20,7 @@ Feature:  read articles
       | day |
       | 1   |
       | 10  |
-      | 15  |
+
   @test
   Scenario: read previous month archive
     When I go to "previous" month
