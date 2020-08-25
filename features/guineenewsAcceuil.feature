@@ -21,10 +21,10 @@ Feature: Acceuil
       | rubrique        |
       | POLITIQUE       |
       | ECONOMIE        |
+      | REVUE DE PRESSE |
       | SPORT           |
       | SOCIETE         |
       | INTERVIEW       |
-      | REVUE DE PRESSE |
       | LE MONDE        |
       | ART & CULTURE   |
       | DERNIERES NOUVELLES |
