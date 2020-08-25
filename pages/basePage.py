@@ -13,7 +13,7 @@ class BasePage(SeleniumDriverWrapper):
         super().__init__(driver)
         self.driver = driver
 
-    def getPageTitle(self):
+    def getPageTitle__(self):
         return self.getPageTitle()
 
     def waitPageToLoad(self, page):

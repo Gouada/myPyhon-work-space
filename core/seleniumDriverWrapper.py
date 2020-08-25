@@ -96,9 +96,11 @@ class SeleniumDriverWrapper:
         except ElementNotVisibleException as error:
             self.logger.error(error)
 
-    def getElementText(self, myLocator, locatorType):
+    def getElementText(self, myLocator="", locatorType="", element=None):
         try:
-            return self.getElement(myLocator, locatorType).text
+            if element is None:
+                    element = self.getElement(myLocator, locatorType)
+            return element.text
         except ElementNotVisibleException as error:
             self.logger.error(error)
 

@@ -1,6 +1,7 @@
 
 from pages.basePage import BasePage
 from utils.logger import MyLogger
+from constants.guineenewsMenu_cats import Menu
 import logging
 import random
 
@@ -21,10 +22,23 @@ class GuineenewsAcceuil(BasePage):
     # rubrique_title_Grand_Sport          = "//div[@class='td-block-title-wrap']//child::a[contains(text(), 'SPORT')]"
     # rubrique_title_Grand_Societe        = "//div[@class='td-block-title-wrap']//child::a[contains(text(), 'SOCIETE')]"
 
+    rubrique_tags = "//ul[@class='td-category']/li"
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
+    def is_rubrique_tag_on_page(self, rubrique):
+        rubriques = self.getElements(self.rubrique_tags, "xpath")
+        if Menu.Le_Monde.upper() == rubrique.upper():
+            return True
+        elif len(rubriques) > 0:
+            for r in rubriques:
+                if self.getElementText(element=r).upper() == rubrique.upper():
+                    return True
+            return False
+        else:
+            return False
     def get_rubrique_xpath(self, rubrique):
 
         if rubrique == 'PUBLIREPORTAGE':
@@ -60,3 +74,4 @@ class GuineenewsAcceuil(BasePage):
             element_index = int(element_index_str)
         #self.arrow_down_up(1,"UP")
         self.clickListElement(elements=elements,elementPosition=int(element_index))
+

@@ -1,6 +1,6 @@
 Feature: showing off behave
 @sp
-  Scenario: run a simple test
+  Scenario: test 1
      Given I start the site guineenews
      Then I click on Societe
       Then I click a random Region

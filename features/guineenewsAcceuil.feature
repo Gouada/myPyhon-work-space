@@ -19,10 +19,15 @@ Feature: Acceuil
     Then I go back
     Examples:
       | rubrique        |
-      |POLITIQUE        |
+      | POLITIQUE       |
       | ECONOMIE        |
       | SPORT           |
       | SOCIETE         |
       | REVUE DE PRESSE |
-      |LE MONDE         |
-      |ART & CULTURE    |
+      | LE MONDE        |
+      | ART & CULTURE   |
+      | DERNIERES NOUVELLES |
+      | PUBLIREPORTAGE   |
+      | FAITS DIVERS     |
+      | INTERVIEW        |
+
