@@ -30,7 +30,7 @@ class GuineenewsAcceuil(BasePage):
 
     def is_rubrique_tag_on_page(self, rubrique):
         rubriques = self.getElements(self.rubrique_tags, "xpath")
-        if Menu.Le_Monde.upper() == rubrique.upper() or Menu.Societe.upper() == rubrique:
+        if Menu.Le_Monde.upper() == rubrique.upper() or Menu.Societe_sa.upper() == rubrique:
             return True
         elif len(rubriques) > 0:
             for r in rubriques:

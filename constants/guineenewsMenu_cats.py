@@ -18,7 +18,7 @@ class Menu():
     Art_et_Culture = 'Art & Culture'
     Revue_de_presse = 'Revue de presse'
     Societe = 'Société'
-
+    Societe_sa = 'Societe'
     Basse_Guinnee = 'Basse Guinée'
     Haute_Guinnee = 'Haute Guinée'
     Guinnee_Forestiere = 'Guinée Forestière'

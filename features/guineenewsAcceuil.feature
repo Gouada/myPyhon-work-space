@@ -23,11 +23,12 @@ Feature: Acceuil
       | ECONOMIE        |
       | SPORT           |
       | SOCIETE         |
+      | INTERVIEW       |
       | REVUE DE PRESSE |
       | LE MONDE        |
       | ART & CULTURE   |
       | DERNIERES NOUVELLES |
       | PUBLIREPORTAGE   |
       | FAITS DIVERS     |
-      | INTERVIEW        |
+
 
