@@ -1,0 +1,26 @@
+2020.08.12 19:09:00 - setUpClass ERROR 
+2020.08.12 19:09:00 - setUpClass ERROR 
+2020.08.12 19:09:05 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/litterature-dr-oumar-doumbouya-presente-son-dixieme-ouvrage/" rel="bookmark" title="...">Littérature : Dr Oumar Doumbouya présente son dixième ouvrage</a> is not clickable at point (1068, 79). Other element would receive the click: <div class="td-container td-header-row td-header-main-menu">...</div>
+  (Session info: chrome=84.0.4147.105)
+
+2020.08.12 19:09:08 - setUpClass ERROR empty range for randrange() (0,0, 0)
+2020.08.12 19:12:42 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/elections-legislatives-cellou-dalein-anticipe-sur-les-gueguerres-internes/" rel="bookmark" title="...">Elections législatives : Cellou Dalein anticipe sur les guéguerres internes</a> is not clickable at point (649, 100). Other element would receive the click: <div class="td-header-menu-wrap td-header-gradient td-affix">...</div>
+  (Session info: chrome=84.0.4147.105)
+
+2020.08.12 19:15:19 - GuineenewsStartPage INFO StartPage successfully created
+2020.08.20 09:12:14 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/monde-agricole-la-ministre-mariama-camara-accueillie-par-une-foule-en-liesse-a-forecariah/" rel="bookmark" title="Monde agricole : La ministre Mariama Camara accueillie par une foule en liesse à  Forécariah">...</a> is not clickable at point (1173, 104). Other element would receive the click: <div class="td-header-menu-wrap td-header-gradient td-affix">...</div>
+  (Session info: chrome=84.0.4147.105)
+
+2020.08.20 09:12:18 - setUpClass ERROR list index out of range
+2020.08.20 09:12:21 - setUpClass ERROR empty range for randrange() (0,0, 0)
+2020.08.20 09:12:28 - setUpClass ERROR 
+2020.08.20 09:17:53 - GuineenewsStartPage INFO StartPage successfully created
+2020.08.20 09:18:45 - setUpClass ERROR 
+2020.08.20 09:18:56 - setUpClass ERROR 
+2020.08.20 09:19:07 - setUpClass ERROR 
+2020.08.20 09:19:30 - setUpClass ERROR 
+2020.08.20 09:19:30 - setUpClass ERROR 
+2020.08.20 09:19:38 - setUpClass ERROR 
+2020.08.20 09:19:49 - setUpClass ERROR 
+2020.08.20 09:20:02 - setUpClass ERROR 
+2020.08.20 09:20:13 - setUpClass ERROR 
