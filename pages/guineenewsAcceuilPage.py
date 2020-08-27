@@ -47,7 +47,10 @@ class GuineenewsAcceuil(BasePage):
             return "//div[@class='td-block-title-wrap']//child::a[contains(text(), '{}')]".format(str(rubrique).upper())
 
     def get_rubrique_elements_xpath_locaor(self, rubrique):
-
+        if rubrique == 'PUBLIREPORTAGE':
+            myLocator = "//div[@class='td-block-title-wrap']//child::span[contains(text(), '{}')]/ancestor::div[@class='td-block-title-wrap']//" \
+                        "following-sibling::div[@class='td_block_inner']//child::h3[@class='entry-title td-module-title']//a" \
+                .format ( str ( rubrique ).upper () )
         #myLocator = "//div[@id='{}']//child::div[@class='item-details']//a".format(str(rubrique_div_id))
         myLocator = "//div[@class='td-block-title-wrap']//child::a[contains(text(), '{}')]/ancestor::div[@class='td-block-title-wrap']//" \
                     "following-sibling::div[@class='td_block_inner']//child::h3[@class='entry-title td-module-title']//a"\

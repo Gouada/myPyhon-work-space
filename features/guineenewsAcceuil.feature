@@ -16,7 +16,7 @@ Feature: Acceuil
     Then I go back
     Then I open "random" "<rubrique>" article
     #Then I click page "down" button
-    Then I go back
+    Then I go backPUBLIREPORTAGE
     Examples:
       | rubrique        |
       | POLITIQUE       |
