@@ -33,6 +33,6 @@ class Guineenews_BDT ():
             #assert context.acceuil_page.is_rubrique_tag_on_page(rubrique)
             sleep ( 3 )
         except AssertionError as error:
-            context.logger.error ( "AssertionError: " + rubrique + " " + error.__str__() )
-            raise AssertionError( "AssertionError: " + rubrique + " " + error.__str__() )
+            context.logger.error ( "AssertionError: " + rubrique + " was not found on page " + error.__str__() )
+            raise AssertionError( "AssertionError: " + rubrique + " was not found on page " + error.__str__() )
 
