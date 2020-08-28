@@ -1,20 +1,23 @@
-2020.08.28 11:27:30 - setUpClass INFO POLITIQUE ......Title: .....PADES: Dr Ousmane Kaba regagne enfin Conakry | Guinéenews©
-2020.08.28 11:27:38 - setUpClass INFO POLITIQUE ......Title: .....Présidentielle 2020 : la mission d’appui technique de la CEDEAO est arrivée à Conakry (CENI) | Guinéenews©
-2020.08.28 11:27:46 - setUpClass INFO POLITIQUE ......Title: .....Présidentielle : « Les Jaunes » organisent un carnaval en faveur de la candidature d’Alpha Condé | Guinéenews©
-2020.08.28 11:28:01 - setUpClass INFO ECONOMIE ......Title: .....Kankan : l’union des producteurs d’anacarde dénonce une opération sur fond de magouille | Guinéenews©
-2020.08.28 11:28:08 - setUpClass INFO ECONOMIE ......Title: .....AFPI : le gouverneur Lounceny Nabé fait son bilan et  passe la main à son homologue tanzanien | Guinéenews©
-2020.08.28 11:28:16 - setUpClass INFO ECONOMIE ......Title: .....Circulation routière à Conakry : une page d’histoire à visiter | Guinéenews©
-2020.08.28 11:28:29 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : « la candidature d’Alpha Condé et le devenir de la nation », « Coronavirus, une aubaine »… | Guinéenews©
-2020.08.28 11:28:36 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : mini remaniement, explosion de grenade à Labé, lutte anti Covid-19, mort de Floyd… | Guinéenews©
-2020.08.28 11:28:43 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : mini remaniement, explosion de grenade à Labé, lutte anti Covid-19, mort de Floyd… | Guinéenews©
-2020.08.28 11:28:58 - setUpClass INFO SPORT ......Title: .....Eliminatoires CAN 2022 : «  la Guinée aura toujours les ressources pour rester leader de son groupe » (consultant) | Guinéenews©
-2020.08.28 11:28:59 - setUpClass ERROR AssertionError: SPORT 
-2020.08.28 11:29:06 - setUpClass INFO SPORT ......Title: .....Affaire Antonio vs Super V et Cie : la décision du tribunal attendue le 16 novembre | Guinéenews©
-2020.08.28 11:29:16 - setUpClass INFO SPORT ......Title: .....Dossier U-17  – Le TAS s’aligne sur la décision de la CAF : la Guinée n’a pas dit son dernier mot   | Guinéenews©
-2020.08.28 11:29:29 - setUpClass INFO SOCIETE ......Title: .....Lutte contre la Covid-19 : Une dizaine d’experts médicaux chinois sont arrivés à Conakry | Guinéenews©
-2020.08.28 11:29:36 - setUpClass INFO SOCIETE ......Title: .....Libération de Foninké Manguè : voici les premiers mots du patron du FNDC | Guinéenews©
-2020.08.28 11:29:45 - setUpClass INFO SOCIETE ......Title: .....Libération de Foninké Manguè : voici les premiers mots du patron du FNDC | Guinéenews©
-2020.08.28 11:29:59 - setUpClass INFO INTERVIEW ......Title: .....Le nouveau commissaire spécial de la sécurité routière de Kobaya à bâtons rompus avec Guinéenews | Guinéenews©
-2020.08.28 11:29:59 - setUpClass ERROR AssertionError: INTERVIEW 
-2020.08.28 11:30:03 - setUpClass ERROR AssertionError: INTERVIEW 
-2020.08.28 11:30:08 - setUpClass ERROR AssertionError: INTERVIEW 
+2020.08.28 12:07:17 - setUpClass ERROR AssertionError: POLITIQUE 
+2020.08.28 12:07:33 - setUpClass ERROR AssertionError: ECONOMIE 
+2020.08.28 12:07:48 - setUpClass ERROR AssertionError: REVUE DE PRESSE 
+2020.08.28 12:08:04 - setUpClass ERROR AssertionError: SPORT 
+2020.08.28 12:08:40 - setUpClass ERROR AssertionError: INTERVIEW 
+2020.08.28 12:09:13 - setUpClass ERROR 
+2020.08.28 12:09:20 - setUpClass ERROR AssertionError: DERNIERES NOUVELLES 
+2020.08.28 12:10:00 - setUpClass ERROR AssertionError: FAITS DIVERS 
+2020.08.28 12:14:54 - GuineenewsStartPage INFO StartPage successfully created
+2020.08.28 12:15:44 - setUpClass ERROR 
+2020.08.28 12:15:55 - setUpClass ERROR 
+2020.08.28 12:16:06 - setUpClass ERROR Message: element click intercepted: Element <a href="https://www.guineenews.org/guinee-alpha-conde-tres-remonte-contre-les-faussaires-du-certificat-covid-19/" rel="bookmark" title="...">Guinée&nbsp;: Alpha Condé très remonté contre les faussaires du certificat Covid-19</a> is not clickable at point (386, 69). Other element would receive the click: <div class="td-container td-header-row td-header-main-menu">...</div>
+  (Session info: chrome=85.0.4183.83)
+
+2020.08.28 12:16:30 - setUpClass ERROR 
+2020.08.28 12:16:41 - setUpClass ERROR 
+2020.08.28 12:17:07 - setUpClass ERROR 
+2020.08.28 12:17:07 - GuineenewsSearchPage ERROR Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div['page-nav td-pb-padding-side']/child::a[@class='last']"}
+  (Session info: chrome=85.0.4183.83)
+
+2020.08.28 12:17:07 - setUpClass ERROR 'NoneType' object has no attribute 'click'
+2020.08.28 12:17:07 - setUpClass ERROR 
+2020.08.28 12:17:16 - setUpClass ERROR 
