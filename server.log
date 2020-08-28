@@ -1,20 +1,20 @@
-2020.08.25 18:30:31 - setUpClass INFO POLITIQUE ......Title: .....Accusé de  détournements, le maire de Labé brise le silence ( Entretien ) | Guinéenews©
-2020.08.25 18:30:39 - setUpClass INFO POLITIQUE ......Title: .....Dr Oussou sur la fuite du courrier de l’UFDG : « les gens l’ont vu mais ils ne savent ce qui l’accompagne » | Guinéenews©
-2020.08.25 18:30:48 - setUpClass INFO POLITIQUE ......Title: .....Agenda du Premier ministre : Kassory Fofana annoncé à un forum en France | Guinéenews©
-2020.08.25 18:31:03 - setUpClass INFO ECONOMIE ......Title: .....Agenda du Premier ministre : Kassory Fofana annoncé à un forum en France | Guinéenews©
-2020.08.25 18:31:11 - setUpClass INFO ECONOMIE ......Title: .....«Chemin de fer Conakry-Bamako, nouvelle compagnie aérienne, une ville médicale et l’assainissement», des grands projets annoncés par Hady Barry | Guinéenews©
-2020.08.25 18:31:11 - setUpClass ERROR AssertionError: ECONOMIE 
-2020.08.25 18:31:15 - setUpClass INFO ECONOMIE ......Title: .....AFPI : le gouverneur Lounceny Nabé fait son bilan et  passe la main à son homologue tanzanien | Guinéenews©
-2020.08.25 18:31:28 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : « la candidature d’Alpha Condé et le devenir de la nation », « Coronavirus, une aubaine »… | Guinéenews©
-2020.08.25 18:31:35 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : mini remaniement, explosion de grenade à Labé, lutte anti Covid-19, mort de Floyd… | Guinéenews©
-2020.08.25 18:31:35 - setUpClass ERROR AssertionError: REVUE DE PRESSE 
-2020.08.25 18:31:40 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : comment Alpha Condé est en train d’en finir avec Kassory, l’amateurisme dans le remaniement ministériel… | Guinéenews©
-2020.08.25 18:31:53 - setUpClass INFO SPORT ......Title: .....Eliminatoires CAN 2022 : «  la Guinée aura toujours les ressources pour rester leader de son groupe » (consultant) | Guinéenews©
-2020.08.25 18:31:53 - setUpClass ERROR AssertionError: SPORT 
-2020.08.25 18:31:59 - setUpClass INFO SPORT ......Title: .....Affaire Antonio vs Super V et Cie : la décision du tribunal attendue le 16 novembre | Guinéenews©
-2020.08.25 18:31:59 - setUpClass ERROR AssertionError: SPORT 
-2020.08.25 18:32:04 - setUpClass INFO SPORT ......Title: .....FEGUIFOOT : Tibou Kamara mandaté par Alpha Condé pour réconcilier Super V et Antonio | Guinéenews©
-2020.08.25 18:32:04 - setUpClass ERROR AssertionError: SPORT 
-2020.08.25 18:32:13 - setUpClass INFO SOCIETE ......Title: .....Bac 2020 : le ministre des Télécoms lance la première épreuve à Matoto | Guinéenews©
-2020.08.25 18:32:22 - setUpClass INFO SOCIETE ......Title: .....Les mouvements de soutien : ces machins politiques budgétivores qui tuent la démocratie en Guinée | Guinéenews©
-2020.08.25 18:32:30 - setUpClass INFO SOCIETE ......Title: .....Me Kabèlè Camara, président du RGD à sans concession de Guinéenews© mardi 25 août à 15h GMT | Guinéenews©
+2020.08.28 11:27:30 - setUpClass INFO POLITIQUE ......Title: .....PADES: Dr Ousmane Kaba regagne enfin Conakry | Guinéenews©
+2020.08.28 11:27:38 - setUpClass INFO POLITIQUE ......Title: .....Présidentielle 2020 : la mission d’appui technique de la CEDEAO est arrivée à Conakry (CENI) | Guinéenews©
+2020.08.28 11:27:46 - setUpClass INFO POLITIQUE ......Title: .....Présidentielle : « Les Jaunes » organisent un carnaval en faveur de la candidature d’Alpha Condé | Guinéenews©
+2020.08.28 11:28:01 - setUpClass INFO ECONOMIE ......Title: .....Kankan : l’union des producteurs d’anacarde dénonce une opération sur fond de magouille | Guinéenews©
+2020.08.28 11:28:08 - setUpClass INFO ECONOMIE ......Title: .....AFPI : le gouverneur Lounceny Nabé fait son bilan et  passe la main à son homologue tanzanien | Guinéenews©
+2020.08.28 11:28:16 - setUpClass INFO ECONOMIE ......Title: .....Circulation routière à Conakry : une page d’histoire à visiter | Guinéenews©
+2020.08.28 11:28:29 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : « la candidature d’Alpha Condé et le devenir de la nation », « Coronavirus, une aubaine »… | Guinéenews©
+2020.08.28 11:28:36 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : mini remaniement, explosion de grenade à Labé, lutte anti Covid-19, mort de Floyd… | Guinéenews©
+2020.08.28 11:28:43 - setUpClass INFO REVUE DE PRESSE ......Title: .....Revue de presse : mini remaniement, explosion de grenade à Labé, lutte anti Covid-19, mort de Floyd… | Guinéenews©
+2020.08.28 11:28:58 - setUpClass INFO SPORT ......Title: .....Eliminatoires CAN 2022 : «  la Guinée aura toujours les ressources pour rester leader de son groupe » (consultant) | Guinéenews©
+2020.08.28 11:28:59 - setUpClass ERROR AssertionError: SPORT 
+2020.08.28 11:29:06 - setUpClass INFO SPORT ......Title: .....Affaire Antonio vs Super V et Cie : la décision du tribunal attendue le 16 novembre | Guinéenews©
+2020.08.28 11:29:16 - setUpClass INFO SPORT ......Title: .....Dossier U-17  – Le TAS s’aligne sur la décision de la CAF : la Guinée n’a pas dit son dernier mot   | Guinéenews©
+2020.08.28 11:29:29 - setUpClass INFO SOCIETE ......Title: .....Lutte contre la Covid-19 : Une dizaine d’experts médicaux chinois sont arrivés à Conakry | Guinéenews©
+2020.08.28 11:29:36 - setUpClass INFO SOCIETE ......Title: .....Libération de Foninké Manguè : voici les premiers mots du patron du FNDC | Guinéenews©
+2020.08.28 11:29:45 - setUpClass INFO SOCIETE ......Title: .....Libération de Foninké Manguè : voici les premiers mots du patron du FNDC | Guinéenews©
+2020.08.28 11:29:59 - setUpClass INFO INTERVIEW ......Title: .....Le nouveau commissaire spécial de la sécurité routière de Kobaya à bâtons rompus avec Guinéenews | Guinéenews©
+2020.08.28 11:29:59 - setUpClass ERROR AssertionError: INTERVIEW 
+2020.08.28 11:30:03 - setUpClass ERROR AssertionError: INTERVIEW 
+2020.08.28 11:30:08 - setUpClass ERROR AssertionError: INTERVIEW 

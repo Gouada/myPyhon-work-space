@@ -22,14 +22,17 @@ class Guineenews_BDT ():
             sleep(3)
         except (Exception, AssertionError) as error:
             context.logger.error(error)
+            raise AssertionError (error)
 
     @then('I open "{position}" "{rubrique}" article')
     def step_impl(context, position, rubrique):
         try:
             context.acceuil_page.click_a_rubrique_element(rubrique, position)
-            context.logger.info ( rubrique + " ......Title: ....." + context.acceuil_page.getPageTitle () )
+            #context.logger.info ( rubrique + " ......Title: ....." + context.acceuil_page.getPageTitle () )
             assert context.acceuil_page.is_text_present ( "Accueil" )
             assert context.acceuil_page.is_rubrique_tag_on_page(rubrique)
             sleep ( 3 )
         except AssertionError as error:
             context.logger.error ( "AssertionError: " + rubrique + " " + error.__str__() )
+            raise AssertionError( "AssertionError: " + rubrique + " " + error.__str__() )
+
