@@ -11,7 +11,7 @@ from utils.logger import MyLogger
 
 @fixture
 def setUpClass(context):
-    driver = MyDriverFactory.getDriverManager ( Browsers.firefox ).getDriver()
+    driver = MyDriverFactory.getDriverManager ( Browsers.chrome ).getDriver()
     context.driver = driver
     lg = MyLogger ()
     context.logger = lg.customLogger ( logging.DEBUG )
