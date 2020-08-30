@@ -21,7 +21,7 @@ class Guineenews_BDT ():
             assert context.acceuil_page.is_text_present(rubrique)
             sleep(3)
         except (Exception, AssertionError) as error:
-            context.acceuil_page.takescreenShotOnError('I_scroll_to_'+rubrique)
+            context.acceuil_page.takescreenShotOnError('I_scroll_to_')
             context.logger.error(error)
             raise AssertionError (error)
 
@@ -34,7 +34,7 @@ class Guineenews_BDT ():
             #assert context.acceuil_page.is_rubrique_tag_on_page(rubrique)
             sleep ( 3 )
         except (Exception, AssertionError) as error:
-            context.acceuil_page.takescreenShotOnError('I_open_'+position + " " + rubrique + "article")
+            context.acceuil_page.takescreenShotOnError('I_open_'+position +  " article")
             context.logger.error ( "AssertionError: " + rubrique + " was not found on page " + error.__str__() )
             raise AssertionError( "AssertionError: " + rubrique + " was not found on page " + error.__str__() )
 
