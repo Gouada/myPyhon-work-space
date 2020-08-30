@@ -381,8 +381,8 @@ class SeleniumDriverWrapper:
             name=stepname+tsp+".png"
 
             self.driver.save_screenshot(name)
-            #webdriver.Chrome.get.get_screenshot_as_png()
-            self.logger.info("taking screenshot ... "+name)
+            #webdriver.Chrome.get_screenshot_as_png()
+            self.logger.info("taking screenshot "+name)
         except Exception as error:
             self.logger.error ( "Error could not take screenshot")
             self.logger.error(error)
