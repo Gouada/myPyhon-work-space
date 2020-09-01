@@ -76,6 +76,8 @@ class GuineenewsAcceuil(BasePage):
             element = self.getListElement ( myLocator=myLocator, locatorType="xpath",
                                             elementPosition=int ( element_index ) )
             self.moveToElement(element)
+            self.arrow_down_up ( 3, "UP" )
+
         elif element_index_str == "last":
             element_index = int(len(elements) -1)
         else:
