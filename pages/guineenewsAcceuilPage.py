@@ -73,13 +73,16 @@ class GuineenewsAcceuil(BasePage):
         elements = self.getElements(myLocator=myLocator, locatorType="xpath")
         if element_index_str == "random":
             element_index = random.randint(0, int(len(elements) -1))
+            element = self.getListElement ( myLocator=myLocator, locatorType="xpath",
+                                            elementPosition=int ( element_index ) )
+            self.scrollElementIntoView(element)
         elif element_index_str == "last":
             element_index = int(len(elements) -1)
         else:
             element_index = int(element_index_str)
-        element = self.getListElement(myLocator=myLocator, locatorType="xpath", elementPosition=int(element_index))
-        if self.isVisible(element=element) is False or self.isClickable(element=element) is False:
-            self.arrow_down_up(3,"UP")
-            self.logger.warning("element was not visible i scrolled")
+
+        #if self.isVisible(element=element) is False or self.isClickable(element=element) is False:
+            #self.arrow_down_up(3,"UP")
+            #self.logger.warning("element was not visible i scrolled")
         self.clickListElement(elements=elements,elementPosition=int(element_index))
 
