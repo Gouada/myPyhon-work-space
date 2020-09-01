@@ -134,7 +134,7 @@ class SeleniumDriverWrapper:
             if element is None:
                 element = self.getElement(myLocator, locatorType)
             is_visible=element.is_displayed()
-            self.logger.warning(f"checking element visibility {is_visible}")
+            #self.logger.warning(f"checking element visibility {is_visible}")
             return is_visible
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
@@ -150,13 +150,13 @@ class SeleniumDriverWrapper:
 
     def isChecked(self, myLocator, locatorType):
         try:
-            return self.getElement(myLocator, locatorType).get_attribute("checked")
+            return self.getElement(myLocator, locatorType).__getattribute__("checked")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def isFocused(self, myLocator, locatorType):
         try:
-            return self.getElement(myLocator, locatorType).get_attribute("focused")
+            return self.getElement(myLocator, locatorType).__getattribute__("focused")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
@@ -166,7 +166,8 @@ class SeleniumDriverWrapper:
             if element is None:
                 byType = self.getByType(locatorType)
                 element = self.getElement(myLocator, byType)
-            is_clickable = element.get_attribute("clickable")
+            is_clickable = element.__getattribute__("clickable")
+            #webdriver.Chrome.find_elements ( By.id, myLocator ).
             self.logger.warning ( f"checking element clickbility  {is_clickable}" )
             return is_clickable
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
@@ -204,26 +205,26 @@ class SeleniumDriverWrapper:
             if element is None:
                 byType = self.getByType(locatorType)
                 element = self.getElements(myLocator, byType).__getitem__(position)
-            return element.get_attribute("clickable")
+            return element.__getattribute__("clickable")
         except Exception as error:
             self.logger.error(error)
 
     def getClassName(self, myLocator, locatorType):
         try:
-            return self.getElement(myLocator, locatorType).get_attribute("classname")
+            return self.getElement(myLocator, locatorType).__getattribute__("classname")
             #webdriver.Chrome.find_elements(By.id, myLocator).__getitem__().__len__()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def getContentDescription(self, myLocator, locatorType):
         try:
-            return self.getElement(myLocator, locatorType).get_attribute("content-Desc")
+            return self.getElement(myLocator, locatorType).__getattribute__("content-Desc")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
     def getName(self, myLocator, locatorType):
         try:
-            return self.getElement(myLocator, locatorType).get_attribute("name")
+            return self.getElement(myLocator, locatorType).__getattribute__("name")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
