@@ -75,7 +75,7 @@ class GuineenewsAcceuil(BasePage):
             element_index = random.randint(0, int(len(elements) -1))
             element = self.getListElement ( myLocator=myLocator, locatorType="xpath",
                                             elementPosition=int ( element_index ) )
-            self.scrollElementIntoView(element)
+            self.moveToElement(element)
         elif element_index_str == "last":
             element_index = int(len(elements) -1)
         else:
