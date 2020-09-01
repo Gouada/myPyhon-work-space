@@ -134,7 +134,7 @@ class SeleniumDriverWrapper:
             if element is None:
                 element = self.getElement(myLocator, locatorType)
             is_visible=element.is_displayed()
-            self.logger.warning("checking element visibility"+is_visible)
+            self.logger.warning(f"checking element visibility {is_visible}")
             return is_visible
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
@@ -167,7 +167,7 @@ class SeleniumDriverWrapper:
                 byType = self.getByType(locatorType)
                 element = self.getElement(myLocator, byType)
             is_clickable = element.get_attribute("clickable")
-            self.logger.warning ( "checking element visibility" + is_clickable )
+            self.logger.warning ( f"checking element visibility  {is_clickable}" )
             return is_clickable
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
