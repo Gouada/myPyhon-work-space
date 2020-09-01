@@ -312,6 +312,14 @@ class SeleniumDriverWrapper:
 
     def scrollElementIntoView(self, element):
         try:
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            #actions = ActionChains ( self.driver )
+            #actions.move_to_element(element).perform()
+        except Exception as error:
+            self.logger.error(error)
+
+    def moveToElement(self, element):
+        try:
             #self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
             actions = ActionChains ( self.driver )
             actions.move_to_element(element).perform()
