@@ -62,7 +62,7 @@ class GuineenewsAcceuil(BasePage):
 
         myLocator = self.get_rubrique_xpath(rubrique)
         element = self.getElement(myLocator, locatorType)
-        self.scrollElementIntoView(element)
+        self.moveToElement(element)
         if rubrique.upper() == "POLITIQUE" or rubrique.upper() == "ART":
             self.arrow_down_up(3, "down")
 
