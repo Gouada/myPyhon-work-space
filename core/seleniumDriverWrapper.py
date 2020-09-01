@@ -128,9 +128,11 @@ class SeleniumDriverWrapper:
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
-    def isVisible(self, myLocator, locatorType):
+    def isVisible(self, myLocator="", locatorType="xpath", element=None):
         try:
-            return self.getElement(myLocator, locatorType).is_displayed()
+            if element is None:
+                element = self.getElement(myLocator, locatorType)
+            return element.is_displayed()
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
@@ -155,10 +157,13 @@ class SeleniumDriverWrapper:
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
-    def isClickable(self, myLocator, locatorType):
+    def isClickable(self, myLocator="", locatorType="xpath", element=None):
         try:
-            byType = self.getByType(locatorType)
-            return self.getElement(myLocator, byType).get_attribute("clickable")
+            if element is None:
+                byType = self.getByType(locatorType)
+                element = self.getElement(myLocator, byType)
+
+            return element.get_attribute("clickable")
         except (ElementNotSelectableException, ElementNotVisibleException) as error:
             self.logger.error(error)
 
