@@ -26,7 +26,7 @@ Feature: Acceuil
       | SOCIETE         |
       | INTERVIEW       |
       | LE MONDE        |
-      | ART & CULTURE   |
+      | ART   |
       | DERNIERES NOUVELLES |
       | PUBLIREPORTAGE   |
       | FAITS DIVERS     |

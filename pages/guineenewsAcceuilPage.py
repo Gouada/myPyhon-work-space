@@ -63,7 +63,7 @@ class GuineenewsAcceuil(BasePage):
         myLocator = self.get_rubrique_xpath(rubrique)
         element = self.getElement(myLocator, locatorType)
         self.scrollElementIntoView(element)
-        if rubrique.upper() == "POLITIQUE" or rubrique.upper() == "ART & CULTURE":
+        if rubrique.upper() == "POLITIQUE" or rubrique.upper() == "ART":
             self.arrow_down_up(3, "down")
 
 
@@ -78,7 +78,8 @@ class GuineenewsAcceuil(BasePage):
         else:
             element_index = int(element_index_str)
         element = self.getListElement(myLocator=myLocator, locatorType="xpath", elementPosition=int(element_index))
-        if self.isClickable(element=element) is False:
+        if self.isVisible(element=element) is False:
             self.arrow_down_up(3,"UP")
+            self.logger.warning("element was not visible i scrolled")
         self.clickListElement(elements=elements,elementPosition=int(element_index))
 
